@@ -1,0 +1,1 @@
+alert('Hello there, everything is working')
