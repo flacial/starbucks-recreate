@@ -21,6 +21,8 @@ header nav #logo-container {
 }
 header nav #nav-global {
   display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
 }
 header nav #nav-global #nav-links-container {
   min-width: 19rem;
@@ -57,24 +59,32 @@ header nav #nav-global #nav-buttons #location-button-container #location-button 
 header nav #nav-global #nav-buttons #sign-in-buttons-container #sign-in {
   border-radius: 20px;
   background: none;
-  padding: 5px;
   border: 1px solid black;
   color: inherit;
   padding: 8px 20px 8px 20px;
   font-family: Raleway;
   font-weight: 700;
   cursor: pointer;
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+header nav #nav-global #nav-buttons #sign-in-buttons-container #sign-in:hover {
+  color: inherit;
+  background: rgba(0, 0, 0, 0.1);
 }
 header nav #nav-global #nav-buttons #sign-in-buttons-container #join {
   border-radius: 20px;
   background: black;
-  padding: 5px;
   border: none;
   color: #f3f1e7;
   padding: 8px 20px 8px 20px;
   font-family: Raleway;
   font-weight: 700;
   cursor: pointer;
+  transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
+  color: #f3f1e7;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .block {
