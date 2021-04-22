@@ -26,8 +26,13 @@ $light-sky: #f1f8f6;
     padding: 0;
     box-sizing: border-box;
     color: rgba(0,0,0,.87);
-    font-family: Raleway;
+    font-family: Raleway, sans-serif;
 }
+
+::selection {
+    color: $light-sky;
+    background: $sb-green;
+  }
 
 header {
     // border: 0.5px solid orangered;

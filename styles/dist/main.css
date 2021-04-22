@@ -3,7 +3,12 @@
   padding: 0;
   box-sizing: border-box;
   color: rgba(0, 0, 0, 0.87);
-  font-family: Raleway;
+  font-family: Raleway, sans-serif;
+}
+
+::selection {
+  color: #f1f8f6;
+  background: #008248;
 }
 
 header {
