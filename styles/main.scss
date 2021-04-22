@@ -227,6 +227,12 @@ header {
                     margin-top: 2rem;
                     margin-bottom: 1rem;
                 }
+
+                #link-svg {
+                    stroke: $light-wheat;
+                    width: 1em;
+                    height: 1em;
+                }
             }
         }
     }

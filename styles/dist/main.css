@@ -196,6 +196,11 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   color: #f3f1e7;
   background: #006638;
 }
+#hero-container #hero-text-container #hero-text #hero-text-width #link-svg {
+  stroke: #f3f1e7;
+  width: 1em;
+  height: 1em;
+}
 
 .sticky-container {
   position: sticky;
