@@ -152,7 +152,7 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   display: flex;
   align-content: center;
   background-color: #1e3932;
-  background-image: url(../static/xl-hero-desktop.png);
+  background-image: url(../../static/xl-hero-desktop.png);
   background-size: auto 100%;
   background-repeat: no-repeat;
   color: #f3f1e7;
