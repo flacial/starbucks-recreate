@@ -3,17 +3,18 @@ $light-cyan: #d4e9e2;
 $light-wheat: #f3f1e7;
 $sb-green: #008248;
 $light-sky: #f1f8f6;
+$dark-wheat: rgba(255, 255, 255, 0.8);
 
 @mixin button($radius, $background, $border, $color, $hover-color, $hover-background) {
     border-radius: $radius;
     background: $background;
     border: $border;
     color: $color;
-    padding: 8px 20px 8px 20px;
+    padding: 8px 18px 8px 18px;
     font-family: Raleway;
     font-weight: 700;
     cursor: pointer;
-    transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+    transition: color 0.1s ease-in-out, background 0.1s ease-in-out;
 
     &:hover {
         color: $hover-color;
@@ -25,84 +26,241 @@ $light-sky: #f1f8f6;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: rgba(0,0,0,.87);
+    color: rgba(0, 0, 0, .87);
+    font-family: Raleway, sans-serif;
+}
+
+::selection {
+    color: $light-sky;
+    background: $sb-green;
 }
 
 header {
-    border: 0.5px solid orangered;
+    // border: 0.5px solid orangered;
     padding-left: 2rem;
     padding-right: 2rem;
+    background-color: white;
 
     nav {
-        border: 0.5px solid blue;
+        // border: 0.5px solid blue;
         display: flex;
         align-items: center;
 
+        // Logo
         #logo-container {
             width: 3.3em;
             height: 3.3em;
         }
-    
+
+        // Links and Buttons container
         #nav-global {
             display: flex;
             flex-grow: 1;
             justify-content: space-between;
-            
+
+            // Nav links container
             #nav-links-container {
-                min-width: 19rem;
+                min-width: 17rem;
                 margin-left: 1.8rem;
-            
+                position: relative;
+
+                // i add this line in css start
+                #line {
+                    position: absolute;
+                    left: 0;
+                    height: 8px;
+                    width: 0;
+                    bottom: 0;
+                    background: $sb-green;
+
+                }
+
+                // i add this line in css end
                 #nav-links {
                     list-style: none;
                     display: flex;
                     justify-content: space-between;
                     font-family: Raleway;
                     font-weight: 800;
-            
-                    li {
+
+                    #anchor {
                         display: inline-block;
                         letter-spacing: 1.1pt;
-                        font-size: 12pt;
+                        font-size: 11pt;
                         text-transform: uppercase;
-                        
-                        
-                        a {
+
+
+                        .anchor {
                             display: block;
                             text-decoration: none;
                             padding-top: 2.5rem;
                             padding-bottom: 2.5rem;
                             // box-shadow: inset 0px -8px rgb(50, 148, 86);
+
+                            // links hover effect
+                            &:hover {
+                                color: $sb-green;
+                            }
+                        }
+
+                        .active {
+                            color: $gray-color;
+                            bottom: 8px;
+                            border-bottom: 8px solid $sb-green;
                         }
                     }
+
                 }
             }
-    
+
             #nav-buttons {
                 display: flex;
                 align-items: center;
-                
+                margin-right: 1rem; //add this to get some space in the right of all buttons
+
                 #location-button-container {
+                    margin-right: 3rem; //add this to get some space in the right of the location button
+
                     #location-button {
                         text-decoration: none;
                         background: none;
                         border: none;
+                        // add this to look great
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        cursor: pointer;
+
+                        &:hover {
+                            #location-svg {
+                                fill: $sb-green;
+                            }
+
+                            #location-button-text {
+                                color: $sb-green;
+                            }
+                        }
+
+                        #location-svg {
+                            width: 1.8em;
+                            height: 1.8em;
+                            overflow: visible;
+                            fill: currentcolor;
+                        }
+
+                        #location-button-text {
+                            color: $gray-color;
+                            margin-left: 0.5em;
+                            font-weight: 700;
+                        }
+
+                        // add this to look great
                     }
                 }
+
                 #sign-in-buttons-container {
-    
+
                     #sign-in {
-                        @include button(20px, none, 1px solid black, inherit, inherit,rgba(0,0,0,.1));
+                        @include button(30px, none, 1px solid black, inherit, inherit, rgba(0, 0, 0, .1));
+                        margin-right: 1rem; //add this to get some space in the right of the dign in button
                     }
-    
+
                     #join {
-                        @include button(20px, black, none, $light-wheat, $light-wheat, rgba(0,0,0,.80))
+                        @include button(30px, black, none, $light-wheat, $light-wheat, rgba(0, 0, 0, .80))
                     }
                 }
             }
-    
+
         }
     }
 
+}
+
+#under-header {
+    background: $gray-color;
+    height: 3rem;
+    box-shadow: 0px 4px 10px rgb(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
+    padding-left: 7.2rem;
+
+
+    #under-header-text {
+        font-size: 12pt;
+        font-weight: 700;
+        color: $light-wheat;
+    }
+}
+
+#hero-container {
+    display: flex;
+    align-content: center;
+    background-color: $gray-color;
+    background-image: url(../../static/xl-hero-desktop.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    color: $light-wheat;
+
+    #hero-text-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        #hero-sizer {
+            padding-bottom: 46.6%;
+        }
+
+        #hero-text {
+            padding-left: 2rem;
+            padding-right: 2rem;
+
+            span,
+            h1,
+            p,
+            a {
+                color: $light-wheat;
+                font-weight: 600;
+            }
+
+            #terms-link {
+                &:hover {
+
+                    &,
+                    span,
+                    #link-svg {
+                        color: $dark-wheat;
+                        stroke: $dark-wheat;
+                    }
+                }
+            }
+
+            #join-link:hover {
+                color: $dark-wheat
+            }
+
+            #hero-text-width {
+                width: 60%;
+
+                #Join-two-button {
+                    @include button(30px, $sb-green, none, $light-wheat, $light-wheat, #006638);
+                    margin-top: 2rem;
+                    margin-bottom: 1rem;
+                }
+
+                #link-svg {
+                    stroke: $light-wheat;
+                    width: 1em;
+                    height: 1em;
+                }
+            }
+        }
+    }
+}
+
+.sticky-container {
+    position: sticky;
+    top: 0;
 }
 
 .block {

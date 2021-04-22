@@ -3,15 +3,20 @@
   padding: 0;
   box-sizing: border-box;
   color: rgba(0, 0, 0, 0.87);
+  font-family: Raleway, sans-serif;
+}
+
+::selection {
+  color: #f1f8f6;
+  background: #008248;
 }
 
 header {
-  border: 0.5px solid orangered;
   padding-left: 2rem;
   padding-right: 2rem;
+  background-color: white;
 }
 header nav {
-  border: 0.5px solid blue;
   display: flex;
   align-items: center;
 }
@@ -25,8 +30,17 @@ header nav #nav-global {
   justify-content: space-between;
 }
 header nav #nav-global #nav-links-container {
-  min-width: 19rem;
+  min-width: 17rem;
   margin-left: 1.8rem;
+  position: relative;
+}
+header nav #nav-global #nav-links-container #line {
+  position: absolute;
+  left: 0;
+  height: 8px;
+  width: 0;
+  bottom: 0;
+  background: #008248;
 }
 header nav #nav-global #nav-links-container #nav-links {
   list-style: none;
@@ -35,56 +49,173 @@ header nav #nav-global #nav-links-container #nav-links {
   font-family: Raleway;
   font-weight: 800;
 }
-header nav #nav-global #nav-links-container #nav-links li {
+header nav #nav-global #nav-links-container #nav-links #anchor {
   display: inline-block;
   letter-spacing: 1.1pt;
-  font-size: 12pt;
+  font-size: 11pt;
   text-transform: uppercase;
 }
-header nav #nav-global #nav-links-container #nav-links li a {
+header nav #nav-global #nav-links-container #nav-links #anchor .anchor {
   display: block;
   text-decoration: none;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
+header nav #nav-global #nav-links-container #nav-links #anchor .anchor:hover {
+  color: #008248;
+}
+header nav #nav-global #nav-links-container #nav-links #anchor .active {
+  color: #1e3932;
+  bottom: 8px;
+  border-bottom: 8px solid #008248;
+}
 header nav #nav-global #nav-buttons {
   display: flex;
   align-items: center;
+  margin-right: 1rem;
+}
+header nav #nav-global #nav-buttons #location-button-container {
+  margin-right: 3rem;
 }
 header nav #nav-global #nav-buttons #location-button-container #location-button {
   text-decoration: none;
   background: none;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+header nav #nav-global #nav-buttons #location-button-container #location-button:hover #location-svg {
+  fill: #008248;
+}
+header nav #nav-global #nav-buttons #location-button-container #location-button:hover #location-button-text {
+  color: #008248;
+}
+header nav #nav-global #nav-buttons #location-button-container #location-button #location-svg {
+  width: 1.8em;
+  height: 1.8em;
+  overflow: visible;
+  fill: currentcolor;
+}
+header nav #nav-global #nav-buttons #location-button-container #location-button #location-button-text {
+  color: #1e3932;
+  margin-left: 0.5em;
+  font-weight: 700;
 }
 header nav #nav-global #nav-buttons #sign-in-buttons-container #sign-in {
-  border-radius: 20px;
+  border-radius: 30px;
   background: none;
   border: 1px solid black;
   color: inherit;
-  padding: 8px 20px 8px 20px;
+  padding: 8px 18px 8px 18px;
   font-family: Raleway;
   font-weight: 700;
   cursor: pointer;
-  transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+  transition: color 0.1s ease-in-out, background 0.1s ease-in-out;
+  margin-right: 1rem;
 }
 header nav #nav-global #nav-buttons #sign-in-buttons-container #sign-in:hover {
   color: inherit;
   background: rgba(0, 0, 0, 0.1);
 }
 header nav #nav-global #nav-buttons #sign-in-buttons-container #join {
-  border-radius: 20px;
+  border-radius: 30px;
   background: black;
   border: none;
   color: #f3f1e7;
-  padding: 8px 20px 8px 20px;
+  padding: 8px 18px 8px 18px;
   font-family: Raleway;
   font-weight: 700;
   cursor: pointer;
-  transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+  transition: color 0.1s ease-in-out, background 0.1s ease-in-out;
 }
 header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   color: #f3f1e7;
   background: rgba(0, 0, 0, 0.8);
+}
+
+#under-header {
+  background: #1e3932;
+  height: 3rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  padding-left: 7.2rem;
+}
+#under-header #under-header-text {
+  font-size: 12pt;
+  font-weight: 700;
+  color: #f3f1e7;
+}
+
+#hero-container {
+  display: flex;
+  align-content: center;
+  background-color: #1e3932;
+  background-image: url(../../static/xl-hero-desktop.png);
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  color: #f3f1e7;
+}
+#hero-container #hero-text-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+#hero-container #hero-text-container #hero-sizer {
+  padding-bottom: 46.6%;
+}
+#hero-container #hero-text-container #hero-text {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+#hero-container #hero-text-container #hero-text span,
+#hero-container #hero-text-container #hero-text h1,
+#hero-container #hero-text-container #hero-text p,
+#hero-container #hero-text-container #hero-text a {
+  color: #f3f1e7;
+  font-weight: 600;
+}
+#hero-container #hero-text-container #hero-text #terms-link:hover,
+#hero-container #hero-text-container #hero-text #terms-link:hover span,
+#hero-container #hero-text-container #hero-text #terms-link:hover #link-svg {
+  color: rgba(255, 255, 255, 0.8);
+  stroke: rgba(255, 255, 255, 0.8);
+}
+#hero-container #hero-text-container #hero-text #join-link:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+#hero-container #hero-text-container #hero-text #hero-text-width {
+  width: 60%;
+}
+#hero-container #hero-text-container #hero-text #hero-text-width #Join-two-button {
+  border-radius: 30px;
+  background: #008248;
+  border: none;
+  color: #f3f1e7;
+  padding: 8px 18px 8px 18px;
+  font-family: Raleway;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.1s ease-in-out, background 0.1s ease-in-out;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+#hero-container #hero-text-container #hero-text #hero-text-width #Join-two-button:hover {
+  color: #f3f1e7;
+  background: #006638;
+}
+#hero-container #hero-text-container #hero-text #hero-text-width #link-svg {
+  stroke: #f3f1e7;
+  width: 1em;
+  height: 1em;
+}
+
+.sticky-container {
+  position: sticky;
+  top: 0;
 }
 
 .block {
