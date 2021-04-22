@@ -136,7 +136,7 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
 
 #under-header {
   background: #1e3932;
-  height: 3.5rem;
+  height: 3rem;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
@@ -144,7 +144,7 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
 }
 #under-header #under-header-text {
   font-size: 12pt;
-  font-weight: 900;
+  font-weight: 700;
   color: #f3f1e7;
 }
 
