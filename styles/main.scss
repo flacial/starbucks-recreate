@@ -39,6 +39,7 @@ header {
     // border: 0.5px solid orangered;
     padding-left: 2rem;
     padding-right: 2rem;
+    background-color: white;
 
     nav {
         // border: 0.5px solid blue;
@@ -198,6 +199,7 @@ header {
     background-image: url(../../static/xl-hero-desktop.png);
     background-size: auto 100%;
     background-repeat: no-repeat;
+    background-position: 50%;
     color: $light-wheat;
 
     #hero-text-container {
@@ -206,7 +208,7 @@ header {
         width: 100%;
 
         #hero-sizer {
-            padding-bottom: 36.6%;
+            padding-bottom: 46.6%;
         }
 
         #hero-text {
@@ -258,6 +260,7 @@ header {
 
 .sticky-container {
     position: sticky;
+    top: 0;
 }
 
 .block {

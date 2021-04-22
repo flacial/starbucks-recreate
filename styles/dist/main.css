@@ -14,6 +14,7 @@
 header {
   padding-left: 2rem;
   padding-right: 2rem;
+  background-color: white;
 }
 header nav {
   display: flex;
@@ -155,6 +156,7 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   background-image: url(../../static/xl-hero-desktop.png);
   background-size: auto 100%;
   background-repeat: no-repeat;
+  background-position: 50%;
   color: #f3f1e7;
 }
 #hero-container #hero-text-container {
@@ -163,7 +165,7 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   width: 100%;
 }
 #hero-container #hero-text-container #hero-sizer {
-  padding-bottom: 36.6%;
+  padding-bottom: 46.6%;
 }
 #hero-container #hero-text-container #hero-text {
   padding-left: 2rem;
@@ -213,6 +215,7 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
 
 .sticky-container {
   position: sticky;
+  top: 0;
 }
 
 .block {
