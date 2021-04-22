@@ -4,16 +4,21 @@ $light-wheat: #f3f1e7;
 $sb-green: #008248;
 $light-sky: #f1f8f6;
 
-@mixin button($radius, $background, $border, $color) {
+@mixin button($radius, $background, $border, $color, $hover-color, $hover-background) {
     border-radius: $radius;
     background: $background;
-    padding: 5px;
     border: $border;
     color: $color;
     padding: 8px 20px 8px 20px;
     font-family: Raleway;
     font-weight: 700;
     cursor: pointer;
+    transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+
+    &:hover {
+        color: $hover-color;
+        background: $hover-background;
+    }
 }
 
 * {
@@ -30,7 +35,6 @@ header {
 
     nav {
         border: 0.5px solid blue;
-        // height: 15vh;
         display: flex;
         align-items: center;
 
@@ -41,6 +45,8 @@ header {
     
         #nav-global {
             display: flex;
+            flex-grow: 1;
+            justify-content: space-between;
             
             #nav-links-container {
                 min-width: 19rem;
@@ -85,11 +91,11 @@ header {
                 #sign-in-buttons-container {
     
                     #sign-in {
-                        @include button(20px, none, 1px solid black, inherit);
+                        @include button(20px, none, 1px solid black, inherit, inherit,rgba(0,0,0,.1));
                     }
     
                     #join {
-                        @include button(20px, black, none, $light-wheat)
+                        @include button(20px, black, none, $light-wheat, $light-wheat, rgba(0,0,0,.80))
                     }
                 }
             }
