@@ -105,6 +105,17 @@ header {
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                        cursor: pointer;
+
+                        &:hover {
+                            #location-svg {
+                                fill: $sb-green;
+                            }
+
+                            #location-button-text {
+                                color: $sb-green;
+                            }
+                        }
                         
                         // add this to look great
                     }
