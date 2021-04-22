@@ -169,11 +169,20 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   padding-left: 2rem;
   padding-right: 2rem;
 }
-#hero-container #hero-text-container #hero-text span, #hero-container #hero-text-container #hero-text h1, #hero-container #hero-text-container #hero-text p, #hero-container #hero-text-container #hero-text a {
+#hero-container #hero-text-container #hero-text span,
+#hero-container #hero-text-container #hero-text h1,
+#hero-container #hero-text-container #hero-text p,
+#hero-container #hero-text-container #hero-text a {
   color: #f3f1e7;
   font-weight: 600;
 }
-#hero-container #hero-text-container #hero-text a:hover {
+#hero-container #hero-text-container #hero-text #terms-link:hover,
+#hero-container #hero-text-container #hero-text #terms-link:hover span,
+#hero-container #hero-text-container #hero-text #terms-link:hover #link-svg {
+  color: rgba(255, 255, 255, 0.8);
+  stroke: rgba(255, 255, 255, 0.8);
+}
+#hero-container #hero-text-container #hero-text #join-link:hover {
   color: rgba(255, 255, 255, 0.8);
 }
 #hero-container #hero-text-container #hero-text #hero-text-width {
