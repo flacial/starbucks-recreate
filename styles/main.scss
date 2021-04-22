@@ -61,9 +61,7 @@ header {
                     width: 0;
                     bottom: 0;
                     background: $sb-green;
-                    transition: 0.3s;
-                    border-bottom-right-radius: 50px;
-                    border-bottom-left-radius: 50px;
+                    
                 } 
                 // i add this line in css end
                 #nav-links {
@@ -72,15 +70,15 @@ header {
                     justify-content: space-between;
                     font-family: Raleway;
                     font-weight: 800;
-            
-                    li {
+
+                    #anchor {
                         display: inline-block;
                         letter-spacing: 1.1pt;
                         font-size: 11pt;
                         text-transform: uppercase;
                         
                         
-                        a {
+                        .anchor {
                             display: block;
                             text-decoration: none;
                             padding-top: 2.5rem;
@@ -88,10 +86,17 @@ header {
                             // box-shadow: inset 0px -8px rgb(50, 148, 86);
     
                             &:hover {
-                                color: $sb-green
+                                color: $sb-green;
                             }
                         }
+
+                        .active {
+                            color: $gray-color;
+                            bottom: 8px;
+                            border-bottom: 8px solid $sb-green;
+                        }
                     }
+                    
                 }
             }
     

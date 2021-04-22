@@ -35,9 +35,6 @@ header nav #nav-global #nav-links-container #line {
   width: 0;
   bottom: 0;
   background: #008248;
-  transition: 0.3s;
-  border-bottom-right-radius: 50px;
-  border-bottom-left-radius: 50px;
 }
 header nav #nav-global #nav-links-container #nav-links {
   list-style: none;
@@ -46,20 +43,25 @@ header nav #nav-global #nav-links-container #nav-links {
   font-family: Raleway;
   font-weight: 800;
 }
-header nav #nav-global #nav-links-container #nav-links li {
+header nav #nav-global #nav-links-container #nav-links #anchor {
   display: inline-block;
   letter-spacing: 1.1pt;
   font-size: 11pt;
   text-transform: uppercase;
 }
-header nav #nav-global #nav-links-container #nav-links li a {
+header nav #nav-global #nav-links-container #nav-links #anchor .anchor {
   display: block;
   text-decoration: none;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
-header nav #nav-global #nav-links-container #nav-links li a:hover {
+header nav #nav-global #nav-links-container #nav-links #anchor .anchor:hover {
   color: #008248;
+}
+header nav #nav-global #nav-links-container #nav-links #anchor .active {
+  color: #1e3932;
+  bottom: 8px;
+  border-bottom: 8px solid #008248;
 }
 header nav #nav-global #nav-buttons {
   display: flex;
