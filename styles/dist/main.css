@@ -27,6 +27,16 @@ header nav #nav-global {
 header nav #nav-global #nav-links-container {
   min-width: 19rem;
   margin-left: 1.8rem;
+  position: relative;
+}
+header nav #nav-global #nav-links-container #line {
+  position: absolute;
+  left: 0;
+  height: 8px;
+  width: 0;
+  bottom: 0;
+  background: #008248;
+  transition: 0.5s;
 }
 header nav #nav-global #nav-links-container #nav-links {
   list-style: none;
@@ -50,11 +60,18 @@ header nav #nav-global #nav-links-container #nav-links li a {
 header nav #nav-global #nav-buttons {
   display: flex;
   align-items: center;
+  margin-right: 1rem;
+}
+header nav #nav-global #nav-buttons #location-button-container {
+  margin-right: 3rem;
 }
 header nav #nav-global #nav-buttons #location-button-container #location-button {
   text-decoration: none;
   background: none;
   border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 header nav #nav-global #nav-buttons #sign-in-buttons-container #sign-in {
   border-radius: 20px;
@@ -66,6 +83,7 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #sign-in {
   font-weight: 700;
   cursor: pointer;
   transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+  margin-right: 1rem;
 }
 header nav #nav-global #nav-buttons #sign-in-buttons-container #sign-in:hover {
   color: inherit;

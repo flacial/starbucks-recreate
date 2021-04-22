@@ -51,7 +51,17 @@ header {
             #nav-links-container {
                 min-width: 19rem;
                 margin-left: 1.8rem;
-            
+                position: relative;
+                // i add this line in css start
+                #line {
+                    position: absolute;
+                    left: 0;
+                    height: 8px;
+                    width: 0;
+                    bottom: 0;
+                    background: $sb-green;
+                    transition: 0.5s;
+                } // i add this line in css end
                 #nav-links {
                     list-style: none;
                     display: flex;
@@ -80,18 +90,28 @@ header {
             #nav-buttons {
                 display: flex;
                 align-items: center;
-                
+                margin-right: 1rem; //add this to get some space in the right of all buttons
+
                 #location-button-container {
+                    margin-right: 3rem;  //add this to get some space in the right of the location button
+
                     #location-button {
                         text-decoration: none;
                         background: none;
                         border: none;
+                        // add this to look great
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        
+                        // add this to look great
                     }
                 }
                 #sign-in-buttons-container {
-    
+                    
                     #sign-in {
                         @include button(20px, none, 1px solid black, inherit, inherit,rgba(0,0,0,.1));
+                        margin-right: 1rem;  //add this to get some space in the right of the dign in button
                     }
     
                     #join {
