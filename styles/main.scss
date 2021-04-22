@@ -147,12 +147,12 @@ header {
                 #sign-in-buttons-container {
                     
                     #sign-in {
-                        @include button(20px, none, 1px solid black, inherit, inherit,rgba(0,0,0,.1));
+                        @include button(30px, none, 1px solid black, inherit, inherit,rgba(0,0,0,.1));
                         margin-right: 1rem;  //add this to get some space in the right of the dign in button
                     }
     
                     #join {
-                        @include button(20px, black, none, $light-wheat, $light-wheat, rgba(0,0,0,.80))
+                        @include button(30px, black, none, $light-wheat, $light-wheat, rgba(0,0,0,.80))
                     }
                 }
             }
@@ -164,7 +164,6 @@ header {
 
 #under-header {
     background: $gray-color;
-    width: 100vw;
     height: 3.5rem;
     box-shadow: 0px 4px 10px rgb(0, 0, 0, .5);
     display: flex;
@@ -176,6 +175,51 @@ header {
      font-size: 12pt;   
      font-weight: 900;
      color: $light-wheat;
+    }
+}
+
+#hero-container {
+    display: flex;
+    align-content: center;
+    background-color: $gray-color;
+    background-image: url(/static/xl-hero-desktop.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    color: $light-wheat;
+
+    #hero-text-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        #hero-sizer {
+            padding-bottom: 36.6%;
+        }
+
+        #hero-text {
+            padding-left: 2rem;
+            padding-right: 2rem;
+    
+            span, h1, p, a {
+                color: $light-wheat;
+                font-weight: 600;
+            }
+    
+            a:hover {
+                color: rgb(255, 255, 255, 0.8);
+            }
+            
+    
+            #hero-text-width {
+                width: 60%;
+    
+                #Join-two-button {
+                    @include button(30px, $sb-green, none, $light-wheat, $light-wheat, #006638);
+                    margin-top: 2rem;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
     }
 }
 
