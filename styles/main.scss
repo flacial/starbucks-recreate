@@ -4,12 +4,105 @@ $light-wheat: #f3f1e7;
 $sb-green: #008248;
 $light-sky: #f1f8f6;
 
-html, body {
-    padding: 0;
-    margin: 0;
+@mixin button($radius, $background, $border, $color) {
+    border-radius: $radius;
+    background: $background;
+    padding: 5px;
+    border: $border;
+    color: $color;
+    padding: 8px 20px 8px 20px;
+    font-family: Raleway;
+    font-weight: 700;
+    cursor: pointer;
 }
 
-h1 {
-    color: $sb-green;
-    font-weight: bold;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgba(0,0,0,.87);
+}
+
+header {
+    border: 0.5px solid orangered;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    nav {
+        border: 0.5px solid blue;
+        // height: 15vh;
+        display: flex;
+        align-items: center;
+
+        #logo-container {
+            width: 3.3em;
+            height: 3.3em;
+        }
+    
+        #nav-global {
+            display: flex;
+            
+            #nav-links-container {
+                min-width: 19rem;
+                margin-left: 1.8rem;
+            
+                #nav-links {
+                    list-style: none;
+                    display: flex;
+                    justify-content: space-between;
+                    font-family: Raleway;
+                    font-weight: 800;
+            
+                    li {
+                        display: inline-block;
+                        letter-spacing: 1.1pt;
+                        font-size: 12pt;
+                        text-transform: uppercase;
+                        
+                        
+                        a {
+                            display: block;
+                            text-decoration: none;
+                            padding-top: 2.5rem;
+                            padding-bottom: 2.5rem;
+                            // box-shadow: inset 0px -8px rgb(50, 148, 86);
+                        }
+                    }
+                }
+            }
+    
+            #nav-buttons {
+                display: flex;
+                align-items: center;
+                
+                #location-button-container {
+                    #location-button {
+                        text-decoration: none;
+                        background: none;
+                        border: none;
+                    }
+                }
+                #sign-in-buttons-container {
+    
+                    #sign-in {
+                        @include button(20px, none, 1px solid black, inherit);
+                    }
+    
+                    #join {
+                        @include button(20px, black, none, $light-wheat)
+                    }
+                }
+            }
+    
+        }
+    }
+
+}
+
+.block {
+    display: block;
+}
+
+.flex {
+    display: flex;
 }

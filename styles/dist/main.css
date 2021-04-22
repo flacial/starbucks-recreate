@@ -1,9 +1,86 @@
-html, body {
-  padding: 0;
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.87);
 }
 
-h1 {
-  color: #008248;
-  font-weight: bold;
+header {
+  border: 0.5px solid orangered;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+header nav {
+  border: 0.5px solid blue;
+  display: flex;
+  align-items: center;
+}
+header nav #logo-container {
+  width: 3.3em;
+  height: 3.3em;
+}
+header nav #nav-global {
+  display: flex;
+}
+header nav #nav-global #nav-links-container {
+  min-width: 19rem;
+  margin-left: 1.8rem;
+}
+header nav #nav-global #nav-links-container #nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  font-family: Raleway;
+  font-weight: 800;
+}
+header nav #nav-global #nav-links-container #nav-links li {
+  display: inline-block;
+  letter-spacing: 1.1pt;
+  font-size: 12pt;
+  text-transform: uppercase;
+}
+header nav #nav-global #nav-links-container #nav-links li a {
+  display: block;
+  text-decoration: none;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+header nav #nav-global #nav-buttons {
+  display: flex;
+  align-items: center;
+}
+header nav #nav-global #nav-buttons #location-button-container #location-button {
+  text-decoration: none;
+  background: none;
+  border: none;
+}
+header nav #nav-global #nav-buttons #sign-in-buttons-container #sign-in {
+  border-radius: 20px;
+  background: none;
+  padding: 5px;
+  border: 1px solid black;
+  color: inherit;
+  padding: 8px 20px 8px 20px;
+  font-family: Raleway;
+  font-weight: 700;
+  cursor: pointer;
+}
+header nav #nav-global #nav-buttons #sign-in-buttons-container #join {
+  border-radius: 20px;
+  background: black;
+  padding: 5px;
+  border: none;
+  color: #f3f1e7;
+  padding: 8px 20px 8px 20px;
+  font-family: Raleway;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
 }

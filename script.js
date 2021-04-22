@@ -1,1 +1,1 @@
-alert('Hello there, everything is working')
+// alert('Hello there, everything is working')
