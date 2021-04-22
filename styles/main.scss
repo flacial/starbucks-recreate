@@ -38,17 +38,20 @@ header {
         // border: 0.5px solid blue;
         display: flex;
         align-items: center;
-
+        
+        // Logo
         #logo-container {
             width: 3.3em;
             height: 3.3em;
         }
-    
+        
+        // Links and Buttons container
         #nav-global {
             display: flex;
             flex-grow: 1;
             justify-content: space-between;
             
+            // Nav links container
             #nav-links-container {
                 min-width: 17rem;
                 margin-left: 1.8rem;
@@ -62,8 +65,8 @@ header {
                     bottom: 0;
                     background: $sb-green;
                     transition: 0.3s;
-                    border-bottom-right-radius: 50px;
-                    border-bottom-left-radius: 50px;
+                    // border-bottom-right-radius: 50px;
+                    // border-bottom-left-radius: 50px;
                 } 
                 // i add this line in css end
                 #nav-links {
@@ -73,20 +76,22 @@ header {
                     font-family: Raleway;
                     font-weight: 800;
             
+                    // Links
                     li {
                         display: inline-block;
                         letter-spacing: 1.1pt;
                         font-size: 11pt;
                         text-transform: uppercase;
                         
-                        
+                        // Links anchor tag
                         a {
                             display: block;
                             text-decoration: none;
                             padding-top: 2.5rem;
                             padding-bottom: 2.5rem;
                             // box-shadow: inset 0px -8px rgb(50, 148, 86);
-    
+                            
+                            // links hover effect
                             &:hover {
                                 color: $sb-green
                             }
@@ -155,6 +160,27 @@ header {
         }
     }
 
+}
+
+#under-header {
+    background: $gray-color;
+    width: 100vw;
+    height: 3.5rem;
+    box-shadow: 0px 4px 10px rgb(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
+    padding-left: 7.2rem;
+    
+
+    #under-header-text {
+     font-size: 12pt;   
+     font-weight: 900;
+     color: $light-wheat;
+    }
+}
+
+.sticky-container {
+    position: sticky;
 }
 
 .block {
