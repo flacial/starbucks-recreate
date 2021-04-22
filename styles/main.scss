@@ -67,7 +67,6 @@ header {
                     transition: 0.3s;
                     // border-bottom-right-radius: 50px;
                     // border-bottom-left-radius: 50px;
-                } 
                 // i add this line in css end
                 #nav-links {
                     list-style: none;
@@ -75,16 +74,15 @@ header {
                     justify-content: space-between;
                     font-family: Raleway;
                     font-weight: 800;
-            
-                    // Links
-                    li {
+
+                    #anchor {
                         display: inline-block;
                         letter-spacing: 1.1pt;
                         font-size: 11pt;
                         text-transform: uppercase;
                         
-                        // Links anchor tag
-                        a {
+                        
+                        .anchor {
                             display: block;
                             text-decoration: none;
                             padding-top: 2.5rem;
@@ -93,10 +91,17 @@ header {
                             
                             // links hover effect
                             &:hover {
-                                color: $sb-green
+                                color: $sb-green;
                             }
                         }
+
+                        .active {
+                            color: $gray-color;
+                            bottom: 8px;
+                            border-bottom: 8px solid $sb-green;
+                        }
                     }
+                    
                 }
             }
     
@@ -152,15 +157,14 @@ header {
                     }
     
                     #join {
-                        @include button(30px, black, none, $light-wheat, $light-wheat, rgba(0,0,0,.80))
+                        @include button(30px, black, none, $light-wheat, $light-wheat, rgba(0,0,0,.80));
                     }
                 }
             }
     
         }
     }
-
-}
+}}
 
 #under-header {
     background: $gray-color;
@@ -229,8 +233,4 @@ header {
 
 .block {
     display: block;
-}
-
-.flex {
-    display: flex;
-}
+};
