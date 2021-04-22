@@ -60,8 +60,10 @@ header {
                     width: 0;
                     bottom: 0;
                     background: $sb-green;
-                    transition: 0.5s;
-                } // i add this line in css end
+                    transition: 0.3s;
+                    border-bottom-right-radius: 50px;
+                    border-bottom-left-radius: 50px;
+                } 
                 #nav-links {
                     list-style: none;
                     display: flex;
