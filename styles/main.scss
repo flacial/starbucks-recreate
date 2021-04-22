@@ -64,9 +64,8 @@ header {
                     width: 0;
                     bottom: 0;
                     background: $sb-green;
-                    transition: 0.3s;
-                    // border-bottom-right-radius: 50px;
-                    // border-bottom-left-radius: 50px;
+                    
+                } 
                 // i add this line in css end
                 #nav-links {
                     list-style: none;
@@ -157,14 +156,15 @@ header {
                     }
     
                     #join {
-                        @include button(30px, black, none, $light-wheat, $light-wheat, rgba(0,0,0,.80));
+                        @include button(30px, black, none, $light-wheat, $light-wheat, rgba(0,0,0,.80))
                     }
                 }
             }
     
         }
     }
-}}
+
+}
 
 #under-header {
     background: $gray-color;
@@ -233,4 +233,8 @@ header {
 
 .block {
     display: block;
-};
+}
+
+.flex {
+    display: flex;
+}

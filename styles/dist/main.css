@@ -35,44 +35,43 @@ header nav #nav-global #nav-links-container #line {
   width: 0;
   bottom: 0;
   background: #008248;
-  transition: 0.3s;
 }
-header nav #nav-global #nav-links-container #line #nav-links {
+header nav #nav-global #nav-links-container #nav-links {
   list-style: none;
   display: flex;
   justify-content: space-between;
   font-family: Raleway;
   font-weight: 800;
 }
-header nav #nav-global #nav-links-container #line #nav-links #anchor {
+header nav #nav-global #nav-links-container #nav-links #anchor {
   display: inline-block;
   letter-spacing: 1.1pt;
   font-size: 11pt;
   text-transform: uppercase;
 }
-header nav #nav-global #nav-links-container #line #nav-links #anchor .anchor {
+header nav #nav-global #nav-links-container #nav-links #anchor .anchor {
   display: block;
   text-decoration: none;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
 }
-header nav #nav-global #nav-links-container #line #nav-links #anchor .anchor:hover {
+header nav #nav-global #nav-links-container #nav-links #anchor .anchor:hover {
   color: #008248;
 }
-header nav #nav-global #nav-links-container #line #nav-links #anchor .active {
+header nav #nav-global #nav-links-container #nav-links #anchor .active {
   color: #1e3932;
   bottom: 8px;
   border-bottom: 8px solid #008248;
 }
-header nav #nav-global #nav-links-container #nav-buttons {
+header nav #nav-global #nav-buttons {
   display: flex;
   align-items: center;
   margin-right: 1rem;
 }
-header nav #nav-global #nav-links-container #nav-buttons #location-button-container {
+header nav #nav-global #nav-buttons #location-button-container {
   margin-right: 3rem;
 }
-header nav #nav-global #nav-links-container #nav-buttons #location-button-container #location-button {
+header nav #nav-global #nav-buttons #location-button-container #location-button {
   text-decoration: none;
   background: none;
   border: none;
@@ -81,24 +80,24 @@ header nav #nav-global #nav-links-container #nav-buttons #location-button-contai
   align-items: center;
   cursor: pointer;
 }
-header nav #nav-global #nav-links-container #nav-buttons #location-button-container #location-button:hover #location-svg {
+header nav #nav-global #nav-buttons #location-button-container #location-button:hover #location-svg {
   fill: #008248;
 }
-header nav #nav-global #nav-links-container #nav-buttons #location-button-container #location-button:hover #location-button-text {
+header nav #nav-global #nav-buttons #location-button-container #location-button:hover #location-button-text {
   color: #008248;
 }
-header nav #nav-global #nav-links-container #nav-buttons #location-button-container #location-button #location-svg {
+header nav #nav-global #nav-buttons #location-button-container #location-button #location-svg {
   width: 1.8em;
   height: 1.8em;
   overflow: visible;
   fill: currentcolor;
 }
-header nav #nav-global #nav-links-container #nav-buttons #location-button-container #location-button #location-button-text {
+header nav #nav-global #nav-buttons #location-button-container #location-button #location-button-text {
   color: #1e3932;
   margin-left: 0.5em;
   font-weight: 700;
 }
-header nav #nav-global #nav-links-container #nav-buttons #sign-in-buttons-container #sign-in {
+header nav #nav-global #nav-buttons #sign-in-buttons-container #sign-in {
   border-radius: 30px;
   background: none;
   border: 1px solid black;
@@ -110,11 +109,11 @@ header nav #nav-global #nav-links-container #nav-buttons #sign-in-buttons-contai
   transition: color 0.1s ease-in-out, background 0.1s ease-in-out;
   margin-right: 1rem;
 }
-header nav #nav-global #nav-links-container #nav-buttons #sign-in-buttons-container #sign-in:hover {
+header nav #nav-global #nav-buttons #sign-in-buttons-container #sign-in:hover {
   color: inherit;
   background: rgba(0, 0, 0, 0.1);
 }
-header nav #nav-global #nav-links-container #nav-buttons #sign-in-buttons-container #join {
+header nav #nav-global #nav-buttons #sign-in-buttons-container #join {
   border-radius: 30px;
   background: black;
   border: none;
@@ -125,7 +124,7 @@ header nav #nav-global #nav-links-container #nav-buttons #sign-in-buttons-contai
   cursor: pointer;
   transition: color 0.1s ease-in-out, background 0.1s ease-in-out;
 }
-header nav #nav-global #nav-links-container #nav-buttons #sign-in-buttons-container #join:hover {
+header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   color: #f3f1e7;
   background: rgba(0, 0, 0, 0.8);
 }
@@ -199,4 +198,8 @@ header nav #nav-global #nav-links-container #nav-buttons #sign-in-buttons-contai
 
 .block {
   display: block;
+}
+
+.flex {
+  display: flex;
 }
