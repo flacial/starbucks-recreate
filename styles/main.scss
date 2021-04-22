@@ -26,6 +26,7 @@ $light-sky: #f1f8f6;
     padding: 0;
     box-sizing: border-box;
     color: rgba(0,0,0,.87);
+    font-family: Raleway;
 }
 
 header {
@@ -49,7 +50,7 @@ header {
             justify-content: space-between;
             
             #nav-links-container {
-                min-width: 19rem;
+                min-width: 17rem;
                 margin-left: 1.8rem;
                 position: relative;
                 // i add this line in css start
@@ -64,6 +65,7 @@ header {
                     border-bottom-right-radius: 50px;
                     border-bottom-left-radius: 50px;
                 } 
+                // i add this line in css end
                 #nav-links {
                     list-style: none;
                     display: flex;
@@ -74,7 +76,7 @@ header {
                     li {
                         display: inline-block;
                         letter-spacing: 1.1pt;
-                        font-size: 12pt;
+                        font-size: 11pt;
                         text-transform: uppercase;
                         
                         
@@ -84,6 +86,10 @@ header {
                             padding-top: 2.5rem;
                             padding-bottom: 2.5rem;
                             // box-shadow: inset 0px -8px rgb(50, 148, 86);
+    
+                            &:hover {
+                                color: $sb-green
+                            }
                         }
                     }
                 }
@@ -116,7 +122,7 @@ header {
                                 color: $sb-green;
                             }
                         }
-                        
+
                         #location-svg {
                             width: 1.8em;
                             height: 1.8em;

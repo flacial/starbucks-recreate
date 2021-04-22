@@ -3,15 +3,14 @@
   padding: 0;
   box-sizing: border-box;
   color: rgba(0, 0, 0, 0.87);
+  font-family: Raleway;
 }
 
 header {
-  border: 0.5px solid orangered;
   padding-left: 2rem;
   padding-right: 2rem;
 }
 header nav {
-  border: 0.5px solid blue;
   display: flex;
   align-items: center;
 }
@@ -25,7 +24,7 @@ header nav #nav-global {
   justify-content: space-between;
 }
 header nav #nav-global #nav-links-container {
-  min-width: 19rem;
+  min-width: 17rem;
   margin-left: 1.8rem;
   position: relative;
 }
@@ -36,7 +35,9 @@ header nav #nav-global #nav-links-container #line {
   width: 0;
   bottom: 0;
   background: #008248;
-  transition: 0.5s;
+  transition: 0.3s;
+  border-bottom-right-radius: 50px;
+  border-bottom-left-radius: 50px;
 }
 header nav #nav-global #nav-links-container #nav-links {
   list-style: none;
@@ -48,7 +49,7 @@ header nav #nav-global #nav-links-container #nav-links {
 header nav #nav-global #nav-links-container #nav-links li {
   display: inline-block;
   letter-spacing: 1.1pt;
-  font-size: 12pt;
+  font-size: 11pt;
   text-transform: uppercase;
 }
 header nav #nav-global #nav-links-container #nav-links li a {
@@ -56,6 +57,9 @@ header nav #nav-global #nav-links-container #nav-links li a {
   text-decoration: none;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+}
+header nav #nav-global #nav-links-container #nav-links li a:hover {
+  color: #008248;
 }
 header nav #nav-global #nav-buttons {
   display: flex;
@@ -72,17 +76,35 @@ header nav #nav-global #nav-buttons #location-button-container #location-button 
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+header nav #nav-global #nav-buttons #location-button-container #location-button:hover #location-svg {
+  fill: #008248;
+}
+header nav #nav-global #nav-buttons #location-button-container #location-button:hover #location-button-text {
+  color: #008248;
+}
+header nav #nav-global #nav-buttons #location-button-container #location-button #location-svg {
+  width: 1.8em;
+  height: 1.8em;
+  overflow: visible;
+  fill: currentcolor;
+}
+header nav #nav-global #nav-buttons #location-button-container #location-button #location-button-text {
+  color: #1e3932;
+  margin-left: 0.5em;
+  font-weight: 700;
 }
 header nav #nav-global #nav-buttons #sign-in-buttons-container #sign-in {
   border-radius: 20px;
   background: none;
   border: 1px solid black;
   color: inherit;
-  padding: 8px 20px 8px 20px;
+  padding: 8px 18px 8px 18px;
   font-family: Raleway;
   font-weight: 700;
   cursor: pointer;
-  transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+  transition: color 0.1s ease-in-out, background 0.1s ease-in-out;
   margin-right: 1rem;
 }
 header nav #nav-global #nav-buttons #sign-in-buttons-container #sign-in:hover {
@@ -94,11 +116,11 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join {
   background: black;
   border: none;
   color: #f3f1e7;
-  padding: 8px 20px 8px 20px;
+  padding: 8px 18px 8px 18px;
   font-family: Raleway;
   font-weight: 700;
   cursor: pointer;
-  transition: color 0.3s ease-in-out, background 0.3s ease-in-out;
+  transition: color 0.1s ease-in-out, background 0.1s ease-in-out;
 }
 header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   color: #f3f1e7;
