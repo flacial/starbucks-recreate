@@ -138,7 +138,7 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
 #under-header {
   background: #1e3932;
   height: 3rem;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   padding-left: 7.2rem;
@@ -211,6 +211,114 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   stroke: #f3f1e7;
   width: 1em;
   height: 1em;
+}
+
+#steps-container {
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-top: 2rem;
+}
+#steps-container #steps-height {
+  padding-bottom: 39.6%;
+}
+#steps-container #steps-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#steps-container #steps-content p {
+  margin-bottom: 3rem;
+  font-weight: 500;
+}
+#steps-container #steps-content a {
+  color: #008248;
+}
+#steps-container #steps {
+  display: flex;
+}
+#steps-container #steps h1 {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+#steps-container #steps p {
+  font-weight: 500;
+}
+#steps-container #steps #step-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-right: 4rem;
+}
+#steps-container #steps #step-1 .circle {
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 100%;
+  border: 2px solid #008248;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+}
+#steps-container #steps #step-1 .circle span {
+  font-weight: 600;
+  font-size: 20pt;
+  font-family: sans-serif;
+  color: #016638;
+}
+#steps-container #steps #step-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#steps-container #steps #step-2 .circle {
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 100%;
+  border: 2px solid #008248;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+}
+#steps-container #steps #step-2 .circle span {
+  font-weight: 600;
+  font-size: 20pt;
+  font-family: sans-serif;
+  color: #016638;
+}
+#steps-container #steps #step-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 4rem;
+}
+#steps-container #steps #step-3 .circle {
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 100%;
+  border: 2px solid #008248;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+}
+#steps-container #steps #step-3 .circle span {
+  font-weight: 600;
+  font-size: 20pt;
+  font-family: sans-serif;
+  color: #016638;
 }
 
 .sticky-container {
