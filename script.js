@@ -1,4 +1,3 @@
-// alert('Hello there, everything is working')
 // navbar link animation start
 let line = document.querySelector('#line');
 let item = document.querySelectorAll('#anchor');
