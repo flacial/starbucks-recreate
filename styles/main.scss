@@ -26,6 +26,7 @@ $dark-wheat: rgba(255, 255, 255, 0.8);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    justify-items: center;
     align-items: center;
 }
 
@@ -206,10 +207,12 @@ header {
 #under-header {
     background: $gray-color;
     height: 3rem;
-    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, .2);
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, .2);
     display: flex;
     align-items: center;
     padding-left: 7.2rem;
+    position: sticky;
+    top: 0;
 
 
     #under-header-text {
@@ -235,7 +238,7 @@ header {
         width: 100%;
 
         #hero-sizer {
-            padding-bottom: 46.6%;
+            padding-bottom: 26.6%;
         }
 
         #hero-text {
@@ -290,13 +293,12 @@ header {
     background-color: white;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
     margin-top: 2rem;
 
     #steps-height {
-        padding-bottom: 39.6%;
+        padding-bottom: 89.6%;
     }
 
     #steps-content {
@@ -306,7 +308,6 @@ header {
         align-items: center;
 
         p {
-            margin-bottom: 3rem;
             font-weight: 500;
         }
         a {
@@ -316,6 +317,8 @@ header {
 
     #steps {
         display: flex;
+        margin-top: 3rem;
+        align-items: flex-start;
 
         h1 {
             font-size: 1.1rem;
@@ -324,31 +327,31 @@ header {
 
         p {
             font-weight: 500;
+            margin-top: 1rem;
+            line-height: 1.5rem;
+            font-size: 14px;
         }
 
         #step-1 {
             @include flex-max();
             @include circle(2em);
             text-align: center;
-            margin-right: 4rem;
+            margin-right: 1rem;
         }
         #step-2 {
             @include flex-max();
             @include circle(2em);
             text-align: center;
+            margin-right: 1rem;
+            margin-left: 1rem;
         }
         #step-3 {
             @include flex-max();
             @include circle(2em);
             text-align: center;
-            margin-left: 4rem;
+            margin-left: 1rem;
         }
     }
-}
-
-.sticky-container {
-    position: sticky;
-    top: 0;
 }
 
 .block {
