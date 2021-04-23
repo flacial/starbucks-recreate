@@ -225,9 +225,10 @@ header {
 #hero-container {
     display: flex;
     align-content: center;
+    height: 100vh;
     background-color: $gray-color;
     background-image: url(../../static/xl-hero-desktop.png);
-    background-size: auto 100%;
+    background-size: 180%;
     background-repeat: no-repeat;
     background-position: 50%;
     color: $light-wheat;
@@ -236,6 +237,7 @@ header {
         display: flex;
         align-items: center;
         width: 100%;
+        
 
         #hero-sizer {
             padding-bottom: 26.6%;
@@ -244,13 +246,14 @@ header {
         #hero-text {
             padding-left: 2rem;
             padding-right: 2rem;
-
+            
             span,
             h1,
             p,
             a {
                 color: $light-wheat;
                 font-weight: 600;
+                
             }
 
             #terms-link {
