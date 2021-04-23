@@ -22,6 +22,21 @@ $dark-wheat: rgba(255, 255, 255, 0.8);
     }
 }
 
+@mixin tab() {
+    border: none;
+    background: none;
+    border-bottom: 4px solid $sb-green;
+    padding: 1rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    cursor: pointer;
+
+    span {
+        font-size: 20pt;
+        font-weight: 600;
+    }
+}
+
 @mixin flex-max() {
     display: flex;
     flex-direction: column;
@@ -213,6 +228,7 @@ header {
     padding-left: 7.2rem;
     position: sticky;
     top: 0;
+    z-index: 99999;
 
 
     #under-header-text {
@@ -240,7 +256,7 @@ header {
         
 
         #hero-sizer {
-            padding-bottom: 26.6%;
+            padding-bottom: 46.6%;
         }
 
         #hero-text {
@@ -301,7 +317,7 @@ header {
     margin-top: 2rem;
 
     #steps-height {
-        padding-bottom: 89.6%;
+        padding-bottom: 39.6%;
     }
 
     #steps-content {
@@ -329,32 +345,107 @@ header {
         }
 
         p {
-            font-weight: 500;
+            font-weight: 600;
             margin-top: 1rem;
             line-height: 1.5rem;
-            font-size: 14px;
+            font-size: 0.9rem;
         }
 
         #step-1 {
             @include flex-max();
             @include circle(2em);
             text-align: center;
-            margin-right: 1rem;
+            margin-right: 2rem;
         }
         #step-2 {
             @include flex-max();
             @include circle(2em);
             text-align: center;
-            margin-right: 1rem;
-            margin-left: 1rem;
+            margin-right: 2rem;
+            margin-left: 2rem;
         }
         #step-3 {
             @include flex-max();
             @include circle(2em);
             text-align: center;
-            margin-left: 1rem;
+            margin-left: 2rem;
         }
     }
+}
+
+#tabs-container {
+    background-color: $light-sky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 5rem;
+    box-shadow: 0px 3px 20px -15px rgba(0, 0, 0, 1);
+    position: relative;
+
+
+    // #tabs-height {
+    //     // padding-bottom: 15.6%;
+    // }
+
+    h1 {
+        margin-top: 3rem;
+        font-size: 21pt;
+    }
+
+    #tabs-buttons-container {
+        margin-top: 2rem;
+
+        button {
+            position: relative;
+            @include tab()  
+        }
+
+        .star-svg {
+            width: 0.8em;
+            height: 0.8em;
+            position: absolute;
+            bottom: 1.5em;
+            margin-left: 2px
+        }
+    }
+}
+
+#tab-panels-container {
+    background-color: $light-cyan;
+    margin-bottom: 10rem;
+
+    #tab-panels-height {
+        padding-bottom: 3.6%;
+    }
+
+    #tab-panels {
+        .tab-panel-flex {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .drink-img {
+                width: 27em;
+                height: 15em;
+                margin-right: 5rem;
+            }
+
+            .tab-panel-text {
+                width: 20rem;
+
+                span {
+                    font-weight: 700;
+                    font-size: 19pt;
+                }
+                p {
+                    margin-top: 1.5rem;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
 }
 
 .block {

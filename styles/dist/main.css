@@ -144,6 +144,7 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   padding-left: 7.2rem;
   position: sticky;
   top: 0;
+  z-index: 99999;
 }
 #under-header #under-header-text {
   font-size: 12pt;
@@ -168,7 +169,7 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   width: 100%;
 }
 #hero-container #hero-text-container #hero-sizer {
-  padding-bottom: 26.6%;
+  padding-bottom: 46.6%;
 }
 #hero-container #hero-text-container #hero-text {
   padding-left: 2rem;
@@ -226,7 +227,7 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   margin-top: 2rem;
 }
 #steps-container #steps-height {
-  padding-bottom: 89.6%;
+  padding-bottom: 39.6%;
 }
 #steps-container #steps-content {
   display: flex;
@@ -250,10 +251,10 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   margin-bottom: 1.5rem;
 }
 #steps-container #steps p {
-  font-weight: 500;
+  font-weight: 600;
   margin-top: 1rem;
   line-height: 1.5rem;
-  font-size: 14px;
+  font-size: 0.9rem;
 }
 #steps-container #steps #step-1 {
   display: flex;
@@ -262,7 +263,7 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   justify-items: center;
   align-items: center;
   text-align: center;
-  margin-right: 1rem;
+  margin-right: 2rem;
 }
 #steps-container #steps #step-1 .circle {
   width: 3.5em;
@@ -287,8 +288,8 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   justify-items: center;
   align-items: center;
   text-align: center;
-  margin-right: 1rem;
-  margin-left: 1rem;
+  margin-right: 2rem;
+  margin-left: 2rem;
 }
 #steps-container #steps #step-2 .circle {
   width: 3.5em;
@@ -313,7 +314,7 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   justify-items: center;
   align-items: center;
   text-align: center;
-  margin-left: 1rem;
+  margin-left: 2rem;
 }
 #steps-container #steps #step-3 .circle {
   width: 3.5em;
@@ -330,6 +331,74 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   font-size: 20pt;
   font-family: sans-serif;
   color: #016638;
+}
+
+#tabs-container {
+  background-color: #f1f8f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 5rem;
+  box-shadow: 0px 3px 20px -15px black;
+  position: relative;
+}
+#tabs-container h1 {
+  margin-top: 3rem;
+  font-size: 21pt;
+}
+#tabs-container #tabs-buttons-container {
+  margin-top: 2rem;
+}
+#tabs-container #tabs-buttons-container button {
+  position: relative;
+  border: none;
+  background: none;
+  border-bottom: 4px solid #008248;
+  padding: 1rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  cursor: pointer;
+}
+#tabs-container #tabs-buttons-container button span {
+  font-size: 20pt;
+  font-weight: 600;
+}
+#tabs-container #tabs-buttons-container .star-svg {
+  width: 0.8em;
+  height: 0.8em;
+  position: absolute;
+  bottom: 1.5em;
+  margin-left: 2px;
+}
+
+#tab-panels-container {
+  background-color: #d4e9e2;
+  margin-bottom: 10rem;
+}
+#tab-panels-container #tab-panels-height {
+  padding-bottom: 3.6%;
+}
+#tab-panels-container #tab-panels .tab-panel-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#tab-panels-container #tab-panels .tab-panel-flex .drink-img {
+  width: 27em;
+  height: 15em;
+  margin-right: 5rem;
+}
+#tab-panels-container #tab-panels .tab-panel-flex .tab-panel-text {
+  width: 20rem;
+}
+#tab-panels-container #tab-panels .tab-panel-flex .tab-panel-text span {
+  font-weight: 700;
+  font-size: 19pt;
+}
+#tab-panels-container #tab-panels .tab-panel-flex .tab-panel-text p {
+  margin-top: 1.5rem;
+  font-weight: 500;
 }
 
 .block {
