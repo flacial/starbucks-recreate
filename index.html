@@ -183,48 +183,48 @@
             <h1>Get your favorites for free</h1>
             <div id="tabs-buttons-container">
 
-                <button id="tab" checked onclick="imgSlider('static/drink-1.webp');hChanger('Customize your drink');pChanger('Make your drink just right with an extra espresso shot, dairy substitute or a dash of your favorite syrup')">
+                <button class="tab" checked id="tab-1">
                     <div>
                         <span>
                             25
                         </span>
-                        <img class="star-svg" src="static/star.svg" alt="star"/>
+                        <img class="star-svg" src="static/star.svg" alt="star" />
                     </div>
                 </button>
 
-                <button id="tab" onclick="imgSlider('static/drink-2.webp');hChanger('Brewed hot coffee, bakery item or hot tea');pChanger('Pair coffee cake or an almond croissant with your fresh cup of hot brew.') ">
+                <button class="tab" id="tab-2">
                     <div>
                         <span>
                             50
                         </span>
-                        <img class="star-svg" src="static/star.svg" alt="star"/>
-                    </div>  
+                        <img class="star-svg" src="static/star.svg" alt="star" />
+                    </div>
                 </button>
 
-                <button id="tab" onclick="imgSlider('static/drink-3.webp');hChanger('Handcrafted drink, hot breakfast or parfait');pChanger('Have a really good morning with a breakfast sandwich, oatmeal or your favorite drink.')">
+                <button class="tab" id="tab-3">
                     <div>
                         <span>
                             150
                         </span>
-                        <img class="star-svg" src="static/star.svg" alt="star"/>
+                        <img class="star-svg" src="static/star.svg" alt="star" />
                     </div>
                 </button>
 
-                <button id="tab" onclick="imgSlider('static/drink-4.webp');hChanger('Salad, sandwich or protein box');pChanger('Nourish your day with a hearty Chipotle Chicken Wrap or Eggs & Cheese Protein Box.')">
+                <button class="tab" id="tab-4">
                     <div>
                         <span>
                             200
                         </span>
-                        <img class="star-svg" src="static/star.svg" alt="star"/>
+                        <img class="star-svg" src="static/star.svg" alt="star" />
                     </div>
                 </button>
 
-                <button id="tab" onclick="imgSlider('static/drink-5.webp');hChanger('Select merchandise or at-home coffee');pChanger('Take home a signature cup, a bag of coffee or your choice of select coffee accessories.')">
+                <button class="tab" id="tab-5">
                     <div>
                         <span>
                             400
                         </span>
-                        <img class="star-svg" src="static/star.svg" alt="star"/>
+                        <img class="star-svg" src="static/star.svg" alt="star" />
                     </div>
                 </button>
 
@@ -233,39 +233,83 @@
         </div>
     </div>
     <div id="tab-panels-container">
-        <div id="tab-panels-height">
-        </div>
+        <div id="tab-panels-height"></div>
         <div id="tab-panels">
             <div id="tab-panel-1" class="tab-panel-flex">
-                <img class="drink-img" src="static/drink-1.webp" alt="drink"/>
+                <img class="drink-img" src="static/drink-1.webp" alt="drink" />
                 <div class="tab-panel-text">
                     <span>
                         Customize your drink
                     </span>
                     <p>
-                        Make your drink just right with an extra espresso shot, dairy substitute or a dash of your favorite syrup
+                        Make your drink just right with an extra espresso shot, dairy substitute or a dash of your
+                        favorite syrup
+                    </p>
+                </div>
+            </div>
+            <div id="tab-panel-2" class="tab-panel-flex hide">
+                <img class="drink-img" src="static/drink-2.webp" alt="drink" />
+                <div class="tab-panel-text">
+                    <span>
+                        Brewed hot coffee, bakery item or hot tea
+                    </span>
+                    <p>
+                        Pair coffee cake or an almond croissant with your fresh cup of hot brew.
+                    </p>
+                </div>
+            </div>
+            <div id="tab-panel-3" class="tab-panel-flex hide">
+                <img class="drink-img" src="static/drink-3.webp" alt="drink" />
+                <div class="tab-panel-text">
+                    <span>
+                        Handcrafted drink, hot breakfast or parfait
+                    </span>
+                    <p>
+                        Have a really good morning with a breakfast sandwich, oatmeal or your favorite drink.
+                    </p>
+                </div>
+            </div>
+            <div id="tab-panel-4" class="tab-panel-flex hide">
+                <img class="drink-img" src="static/drink-4.webp" alt="drink" />
+                <div class="tab-panel-text">
+                    <span>
+                        Salad, sandwich or protein box
+                    </span>
+                    <p>
+                        Nourish your day with a hearty Chipotle Chicken Wrap or Eggs & Cheese Protein Box.
+                    </p>
+                </div>
+            </div>
+            <div id="tab-panel-5" class="tab-panel-flex hide">
+                <img class="drink-img" src="static/drink-5.webp" alt="drink" />
+                <div class="tab-panel-text">
+                    <span>
+                        Select merchandise or at-home coffee
+                    </span>
+                    <p>
+                        Take home a signature cup, a bag of coffee or your choice of select coffee accessories.
                     </p>
                 </div>
             </div>
         </div>
-        
     </div>
     <!-- Customize Tabs Start -->
 
     <!-- Benefits Start -->
     <div id="benefits-container">
-        <div id="benefits-height"></div>
         <div id="benefits-content">
             <h1>Endless Extras</h1>
             <br>
-            <p>Joining Starbucks® Rewards means unlocking access to exclusive benefits. Say hello to easy <br> ordering, tasty Rewards and—yes, free coffee.</p>
+            <p>Joining Starbucks® Rewards means unlocking access to exclusive benefits. Say hello to easy <br> ordering,
+                tasty Rewards and—yes, free coffee.</p>
             <div id="benefits">
                 <div id="benefit-1">
                     <div class="benefit-icon">
                         <img src="static\1-fun-freebies.webp" alt="first">
                     </div>
                     <h1>Fun freebies</h1>
-                    <p>Not only can you earn free coffee, look forward to a birthday treat plus coffee and tea refills.</p>
+                    <p>Not only can you earn free coffee, look forward to a birthday treat plus coffee and tea refills.
+                    </p>
                     <a href="#" class="learn-more-link">Learn more</a>
                 </div>
                 <div id="benefit-2">

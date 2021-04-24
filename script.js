@@ -1,13 +1,14 @@
 // navbar link animation start
+const $ = query => document.querySelector(query)
+
 let line = document.querySelector('#line');
 let item = document.querySelectorAll('#anchor');
 
 let secLine = document.querySelector('#secLine');
-let tabs = document.querySelectorAll('#tab');
+let tabs = document.querySelectorAll('.tab');
 
 let header = document.getElementById("nav-links");
 let btns = header.getElementsByClassName("anchor");
-
 
 for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function() {
@@ -33,27 +34,54 @@ function secIndicator(e) {
     secLine.style.width = e.offsetWidth+"px";
 }
 
+// Make all the tabpanels hidden except the one called tab
+const tabPanelsRemover = (tab) => {
+    for (let i = 1; i < 6; i++) {
+        if (i !== tab) {
+            document.querySelector(`#tab-panel-${i}`).classList.add('hide')
+            document.querySelector(`#tab-panel-${i}`).classList.remove('show')
+        }
+        
+    }
+}
+
+
+
 tabs.forEach(Link => {
     Link.addEventListener('click', (e)=> {
         secIndicator(e.target);
+        
+        const id = Number(e.target.id[e.target.id.length - 1])
+        const tabPanelId = (id) => {
+            return Number(document.querySelector(`#tab-panel-${id}`).id[document.querySelector(`#tab-panel-${id}`).id.length - 1])
+        }
+        const tabPanel = (id) => document.querySelector(`#tab-panel-${id}`)
+
+        // Checks if button id (1) is equal to the tab id (1), if they're equal add the show class to the tabpanel and remove the hide class and hide all the rest of the tabpanels
+        if (id === tabPanelId(id)) {
+            tabPanel(id).classList.add('show')
+            tabPanel(id).classList.remove('hide')
+            tabPanelsRemover(id)
+        }
     })
 })
 
 // navbar link animation end
-drinkImg = document.querySelector('.drink-img');
+// drinkImg = document.querySelector('.drink-img');
 
-function imgSlider(images, g) {
-    document.querySelector('.drink-img').src = images;
-    drinkImg.style.transition = g;
-}
 
-function hChanger(h1) {
-    document.querySelector('.tab-panel-text span').innerHTML = h1;
-}
+// function imgSlider(images, g) {
+//     document.querySelector('.drink-img').src = images;
+//     drinkImg.style.transition = g;
+// }
 
-function pChanger(p) {
-    document.querySelector('.tab-panel-text p').innerHTML = p;
-}
+// function hChanger(h1) {
+//     document.querySelector('.tab-panel-text span').innerHTML = h1;
+// }
+
+// function pChanger(p) {
+//     document.querySelector('.tab-panel-text p').innerHTML = p;
+// }
 
 // const tabObj = {
 //     tabChanges: [

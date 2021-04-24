@@ -426,7 +426,7 @@ header {
 
         }
 
-        #tab {
+        .tab {
             @include tab();  
         }
     }
@@ -436,21 +436,36 @@ header {
     background-color: $light-cyan;
     margin-bottom: 8rem;
 
-    #tab-panels-height {
-        padding-bottom: 3.6%;
-    }
+    // #tab-panels-height {
+    //     padding-bottom: 30.6%;
+    // }
 
     #tab-panels {
+        position: relative;
+        padding-bottom: 21%;
+        display: flex;
+        justify-content: center;
+
+        .show {
+            opacity: 1;
+        }
+
+        .hide {
+            opacity: 0;
+        }
 
         .tab-panel-flex {
-            display: flex;
+            position: absolute;
+            transition: .3s ease-in-out;
+            transition-property: opacity, visibility;
             justify-content: center;
             align-items: center;
+            display: flex;
+            margin-top: 2rem;
             
-
             .drink-img {
-                width: 27em;
-                height: 15em;
+                width: 22em;
+                height: 12em;
                 margin-right: 5rem;
             }
 
@@ -479,9 +494,6 @@ header {
     padding-left: 4rem;
     padding-right: 4rem;
     margin-bottom: 8rem;
-    #benefits-height {
-        padding-bottom: 30%;
-    }
 
     #benefits-content {
         display: flex;
