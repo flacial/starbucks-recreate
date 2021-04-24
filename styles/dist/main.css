@@ -14,7 +14,10 @@
 header {
   padding-left: 2rem;
   padding-right: 2rem;
+  position: sticky;
+  z-index: 999999;
   background-color: white;
+  top: 0;
 }
 header nav {
   display: flex;
@@ -138,10 +141,13 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
 #under-header {
   background: #1e3932;
   height: 3rem;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   padding-left: 7.2rem;
+  position: sticky;
+  top: 6.55rem;
+  z-index: 99999;
 }
 #under-header #under-header-text {
   font-size: 12pt;
@@ -152,12 +158,14 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
 #hero-container {
   display: flex;
   align-content: center;
+  height: 100vh;
   background-color: #1e3932;
   background-image: url(../../static/xl-hero-desktop.png);
-  background-size: auto 100%;
+  background-size: 180%;
   background-repeat: no-repeat;
   background-position: 50%;
   color: #f3f1e7;
+  margin-bottom: 4rem;
 }
 #hero-container #hero-text-container {
   display: flex;
@@ -213,9 +221,337 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   height: 1em;
 }
 
-.sticky-container {
-  position: sticky;
-  top: 0;
+#steps-container {
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+#steps-container #steps-height {
+  padding-bottom: 39.6%;
+}
+#steps-container #steps-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#steps-container #steps-content p {
+  font-weight: 500;
+}
+#steps-container #steps-content a {
+  color: #008248;
+}
+#steps-container #steps {
+  display: flex;
+  margin-top: 3rem;
+  align-items: flex-start;
+}
+#steps-container #steps h1 {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+#steps-container #steps p {
+  font-weight: 600;
+  margin-top: 1rem;
+  line-height: 1.5rem;
+  font-size: 0.9rem;
+}
+#steps-container #steps #step-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  margin-right: 2rem;
+}
+#steps-container #steps #step-1 .circle {
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 100%;
+  border: 2px solid #008248;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+}
+#steps-container #steps #step-1 .circle span {
+  font-weight: 600;
+  font-size: 20pt;
+  font-family: sans-serif;
+  color: #016638;
+}
+#steps-container #steps #step-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+#steps-container #steps #step-2 .circle {
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 100%;
+  border: 2px solid #008248;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+}
+#steps-container #steps #step-2 .circle span {
+  font-weight: 600;
+  font-size: 20pt;
+  font-family: sans-serif;
+  color: #016638;
+}
+#steps-container #steps #step-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 2rem;
+}
+#steps-container #steps #step-3 .circle {
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 100%;
+  border: 2px solid #008248;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+}
+#steps-container #steps #step-3 .circle span {
+  font-weight: 600;
+  font-size: 20pt;
+  font-family: sans-serif;
+  color: #016638;
+}
+
+#tabs-container {
+  background-color: #f1f8f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 5rem;
+  box-shadow: 0px 3px 20px -15px black;
+  position: relative;
+}
+#tabs-container h1 {
+  margin-top: 3rem;
+  font-size: 21pt;
+}
+#tabs-container #tabs-buttons-container {
+  margin-top: 2rem;
+  position: relative;
+  display: flex;
+}
+#tabs-container #tabs-buttons-container .star-svg {
+  width: 0.8em;
+  height: 0.8em;
+  position: absolute;
+  bottom: 1.5em;
+  margin-left: 2px;
+}
+#tabs-container #tabs-buttons-container #secLine {
+  position: absolute;
+  left: 0;
+  height: 4px;
+  width: 96px;
+  bottom: 0px;
+  background: #008248;
+  transition: 0.3s;
+}
+#tabs-container #tabs-buttons-container .tab {
+  border: none;
+  background: none;
+  padding: 1rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  cursor: pointer;
+}
+#tabs-container #tabs-buttons-container .tab div {
+  pointer-events: none;
+  cursor: default;
+}
+#tabs-container #tabs-buttons-container .tab span {
+  font-size: 20pt;
+  font-weight: 600;
+}
+
+#tab-panels-container {
+  background-color: #d4e9e2;
+  margin-bottom: 8rem;
+}
+#tab-panels-container #tab-panels {
+  position: relative;
+  padding-bottom: 21%;
+  display: flex;
+  justify-content: center;
+}
+#tab-panels-container #tab-panels .show {
+  opacity: 1;
+}
+#tab-panels-container #tab-panels .hide {
+  opacity: 0;
+}
+#tab-panels-container #tab-panels .tab-panel-flex {
+  position: absolute;
+  transition: 0.3s ease-in-out;
+  transition-property: opacity, visibility;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin-top: 2rem;
+}
+#tab-panels-container #tab-panels .tab-panel-flex .drink-img {
+  width: 22em;
+  height: 12em;
+  margin-right: 5rem;
+}
+#tab-panels-container #tab-panels .tab-panel-flex .tab-panel-text {
+  width: 20rem;
+}
+#tab-panels-container #tab-panels .tab-panel-flex .tab-panel-text span {
+  font-weight: 700;
+  font-size: 19pt;
+}
+#tab-panels-container #tab-panels .tab-panel-flex .tab-panel-text p {
+  margin-top: 1.5rem;
+  font-weight: 500;
+}
+
+#benefits-container {
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  margin-bottom: 8rem;
+}
+#benefits-container #benefits-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#benefits-container #benefits-content p {
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+#benefits-container #benefits-content a {
+  color: #008248;
+}
+#benefits-container #benefits-content a:hover {
+  text-decoration: none;
+}
+#benefits-container #benefits {
+  display: flex;
+  margin-top: 3rem;
+  align-items: flex-start;
+}
+#benefits-container #benefits img {
+  max-width: 8rem;
+  max-height: 8rem;
+  margin-bottom: 2rem;
+}
+#benefits-container #benefits h1 {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+#benefits-container #benefits p {
+  font-weight: 600;
+  margin-top: 1rem;
+  line-height: 1.5rem;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+#benefits-container #benefits #benefit-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  margin-right: 2rem;
+}
+#benefits-container #benefits #benefit-1 .circle {
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 100%;
+  border: 2px solid #008248;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+}
+#benefits-container #benefits #benefit-1 .circle span {
+  font-weight: 600;
+  font-size: 20pt;
+  font-family: sans-serif;
+  color: #016638;
+}
+#benefits-container #benefits #benefit-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+#benefits-container #benefits #benefit-2 .circle {
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 100%;
+  border: 2px solid #008248;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+}
+#benefits-container #benefits #benefit-2 .circle span {
+  font-weight: 600;
+  font-size: 20pt;
+  font-family: sans-serif;
+  color: #016638;
+}
+#benefits-container #benefits #benefit-3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  margin-left: 2rem;
+}
+#benefits-container #benefits #benefit-3 .circle {
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 100%;
+  border: 2px solid #008248;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+}
+#benefits-container #benefits #benefit-3 .circle span {
+  font-weight: 600;
+  font-size: 20pt;
+  font-family: sans-serif;
+  color: #016638;
 }
 
 .block {

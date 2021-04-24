@@ -22,6 +22,54 @@ $dark-wheat: rgba(255, 255, 255, 0.8);
     }
 }
 
+@mixin tab() {
+    border: none;
+    background: none;
+    // border-bottom: 4px solid $sb-green;
+    padding: 1rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    cursor: pointer;
+
+    div {
+        pointer-events: none;
+        cursor: default;
+    }
+
+    span {
+        font-size: 20pt;
+        font-weight: 600;
+    }
+}
+
+@mixin flex-max() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+@mixin circle($margin) {
+    .circle {
+        width: 3.5em;
+        height: 3.5em;
+        border-radius: 100%;
+        border: 2px solid $sb-green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: $margin;
+
+        span {
+            font-weight: 600;
+            font-size: 20pt;
+            font-family: sans-serif;
+            color: #016638;
+        }
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -39,7 +87,11 @@ header {
     // border: 0.5px solid orangered;
     padding-left: 2rem;
     padding-right: 2rem;
+    position: sticky;
+    z-index: 999999;
     background-color: white;
+    top: 0;
+
 
     nav {
         // border: 0.5px solid blue;
@@ -179,10 +231,13 @@ header {
 #under-header {
     background: $gray-color;
     height: 3rem;
-    box-shadow: 0px 4px 10px rgb(0, 0, 0, .5);
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, .2);
     display: flex;
     align-items: center;
     padding-left: 7.2rem;
+    position: sticky;
+    top: 6.55rem;
+    z-index: 99999;
 
 
     #under-header-text {
@@ -195,17 +250,20 @@ header {
 #hero-container {
     display: flex;
     align-content: center;
+    height: 100vh;
     background-color: $gray-color;
     background-image: url(../../static/xl-hero-desktop.png);
-    background-size: auto 100%;
+    background-size: 180%;
     background-repeat: no-repeat;
     background-position: 50%;
     color: $light-wheat;
+    margin-bottom: 4rem;
 
     #hero-text-container {
         display: flex;
         align-items: center;
         width: 100%;
+        
 
         #hero-sizer {
             padding-bottom: 46.6%;
@@ -214,13 +272,14 @@ header {
         #hero-text {
             padding-left: 2rem;
             padding-right: 2rem;
-
+            
             span,
             h1,
             p,
             a {
                 color: $light-wheat;
                 font-weight: 600;
+                
             }
 
             #terms-link {
@@ -258,9 +317,250 @@ header {
     }
 }
 
-.sticky-container {
-    position: sticky;
-    top: 0;
+#steps-container {
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
+
+    #steps-height {
+        padding-bottom: 39.6%;
+    }
+
+    #steps-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            font-weight: 500;
+        }
+        a {
+            color: $sb-green
+        }
+    }
+
+    #steps {
+        display: flex;
+        margin-top: 3rem;
+        align-items: flex-start;
+
+        h1 {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            font-weight: 600;
+            margin-top: 1rem;
+            line-height: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        #step-1 {
+            @include flex-max();
+            @include circle(2em);
+            text-align: center;
+            margin-right: 2rem;
+        }
+        #step-2 {
+            @include flex-max();
+            @include circle(2em);
+            text-align: center;
+            margin-right: 2rem;
+            margin-left: 2rem;
+        }
+        #step-3 {
+            @include flex-max();
+            @include circle(2em);
+            text-align: center;
+            margin-left: 2rem;
+        }
+    }
+}
+
+#tabs-container {
+    background-color: $light-sky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 5rem;
+    box-shadow: 0px 3px 20px -15px rgba(0, 0, 0, 1);
+    position: relative;
+
+
+    // #tabs-height {
+    //     // padding-bottom: 15.6%;
+    // }
+
+    h1 {
+        margin-top: 3rem;
+        font-size: 21pt;
+    }
+
+    #tabs-buttons-container {
+        margin-top: 2rem;
+        position: relative;
+        display: flex;
+
+        .star-svg {
+            width: 0.8em;
+            height: 0.8em;
+            position: absolute;
+            bottom: 1.5em;
+            margin-left: 2px;
+        }
+
+        #secLine {
+            position: absolute;
+            left: 0;
+            height: 4px;
+            width: 96px;
+            bottom: 0px;
+            background: $sb-green;
+            transition: 0.3s;
+
+        }
+
+        .tab {
+            @include tab();  
+        }
+    }
+}
+
+#tab-panels-container {
+    background-color: $light-cyan;
+    margin-bottom: 8rem;
+
+    // #tab-panels-height {
+    //     padding-bottom: 30.6%;
+    // }
+
+    #tab-panels {
+        position: relative;
+        padding-bottom: 21%;
+        display: flex;
+        justify-content: center;
+
+        .show {
+            opacity: 1;
+        }
+
+        .hide {
+            opacity: 0;
+        }
+
+        .tab-panel-flex {
+            position: absolute;
+            transition: .3s ease-in-out;
+            transition-property: opacity, visibility;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            margin-top: 2rem;
+            
+            .drink-img {
+                width: 22em;
+                height: 12em;
+                margin-right: 5rem;
+            }
+
+            .tab-panel-text {
+                width: 20rem;
+
+                span {
+                    font-weight: 700;
+                    font-size: 19pt;
+                }
+                p {
+                    margin-top: 1.5rem;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+}
+
+#benefits-container {
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    margin-bottom: 8rem;
+
+    #benefits-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        a {
+            color: $sb-green;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+    }
+
+    #benefits {
+        display: flex;
+        margin-top: 3rem;
+        align-items: flex-start;
+
+        img {
+            max-width: 8rem;
+            max-height: 8rem;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            font-weight: 600;
+            margin-top: 1rem;
+            line-height: 1.5rem;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        #benefit-1 {
+            
+            @include flex-max();
+            @include circle(2em);
+            text-align: center;
+            margin-right: 2rem;
+        }
+
+        #benefit-2 {
+            @include flex-max();
+            @include circle(2em);
+            text-align: center;
+            margin-right: 2rem;
+            margin-left: 2rem;
+        }
+
+        #benefit-3 {
+            @include flex-max();
+            @include circle(2em);
+            text-align: center;
+            margin-left: 2rem;
+        }
+    }
 }
 
 .block {
