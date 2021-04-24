@@ -36,6 +36,8 @@ function secIndicator(e) {
 
 // Make all the tabpanels hidden except the one called tab
 const tabPanelsRemover = (tab) => {
+    
+    // Loops through 1 to 6 except the tab number while adding hide to the elements and removing show.
     for (let i = 1; i < 6; i++) {
         if (i !== tab) {
             const tabPanel = document.querySelector(`#tab-panel-${i}`)
@@ -52,12 +54,17 @@ tabs.forEach(Link => {
     Link.addEventListener('click', (e)=> {
         secIndicator(e.target);
         
+        // Slice the last value of the button id which is a number like 1 or 5
         const id = Number(e.target.id[e.target.id.length - 1])
+
+        // Slice the last value of the tab panel id which is also a number like 1 or 5
         const tabPanelId = (id) => {
             const tabPanel = document.querySelector(`#tab-panel-${id}`)
-            
+
             return Number(tabPanel.id[tabPanel.id.length - 1])
         }
+
+        // Function to get the tab panel by id
         const tabPanel = (id) => document.querySelector(`#tab-panel-${id}`)
 
         // Checks if button id (1) is equal to the tab id (1), if they're equal add the show class to the tabpanel and remove the hide class and hide all the rest of the tabpanels
