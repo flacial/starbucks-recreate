@@ -38,8 +38,9 @@ function secIndicator(e) {
 const tabPanelsRemover = (tab) => {
     for (let i = 1; i < 6; i++) {
         if (i !== tab) {
-            document.querySelector(`#tab-panel-${i}`).classList.add('hide')
-            document.querySelector(`#tab-panel-${i}`).classList.remove('show')
+            const tabPanel = document.querySelector(`#tab-panel-${i}`)
+            tabPanel.classList.add('hide')
+            tabPanel.classList.remove('show')
         }
         
     }
@@ -53,7 +54,9 @@ tabs.forEach(Link => {
         
         const id = Number(e.target.id[e.target.id.length - 1])
         const tabPanelId = (id) => {
-            return Number(document.querySelector(`#tab-panel-${id}`).id[document.querySelector(`#tab-panel-${id}`).id.length - 1])
+            const tabPanel = document.querySelector(`#tab-panel-${id}`)
+            
+            return Number(tabPanel.id[tabPanel.id.length - 1])
         }
         const tabPanel = (id) => document.querySelector(`#tab-panel-${id}`)
 
