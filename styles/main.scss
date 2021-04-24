@@ -257,6 +257,7 @@ header {
     background-repeat: no-repeat;
     background-position: 50%;
     color: $light-wheat;
+    margin-bottom: 4rem;
 
     #hero-text-container {
         display: flex;
@@ -323,7 +324,6 @@ header {
     justify-content: center;
     padding-left: 4rem;
     padding-right: 4rem;
-    margin-top: 2rem;
 
     #steps-height {
         padding-bottom: 39.6%;
@@ -434,7 +434,7 @@ header {
 
 #tab-panels-container {
     background-color: $light-cyan;
-    margin-bottom: 10rem;
+    margin-bottom: 4rem;
 
     #tab-panels-height {
         padding-bottom: 3.6%;
@@ -472,9 +472,82 @@ header {
 }
 
 #benefits-container {
-
-    #benefits-sizer {
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    margin-bottom: 8rem;
+    #benefits-height {
         padding-bottom: 30%;
+    }
+
+    #benefits-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        a {
+            color: $sb-green;
+        }
+        a:hover {
+            text-decoration: none;
+        }
+    }
+
+    #benefits {
+        display: flex;
+        margin-top: 3rem;
+        align-items: flex-start;
+
+        img {
+            max-width: 8rem;
+            max-height: 8rem;
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            font-weight: 600;
+            margin-top: 1rem;
+            line-height: 1.5rem;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        #benefit-1 {
+            
+            @include flex-max();
+            @include circle(2em);
+            text-align: center;
+            margin-right: 2rem;
+        }
+
+        #benefit-2 {
+            @include flex-max();
+            @include circle(2em);
+            text-align: center;
+            margin-right: 2rem;
+            margin-left: 2rem;
+        }
+
+        #benefit-3 {
+            @include flex-max();
+            @include circle(2em);
+            text-align: center;
+            margin-left: 2rem;
+        }
     }
 }
 
