@@ -417,6 +417,10 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   font-weight: 500;
 }
 
+#benefits-container #benefits-sizer {
+  padding-bottom: 30%;
+}
+
 .block {
   display: block;
 }
