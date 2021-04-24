@@ -366,7 +366,7 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   position: absolute;
   left: 0;
   height: 4px;
-  width: 0;
+  width: 96px;
   bottom: 0px;
   background: #008248;
   transition: 0.3s;
