@@ -25,7 +25,7 @@ $dark-wheat: rgba(255, 255, 255, 0.8);
 @mixin tab() {
     border: none;
     background: none;
-    border-bottom: 4px solid $sb-green;
+    // border-bottom: 4px solid $sb-green;
     padding: 1rem;
     padding-right: 2rem;
     padding-left: 2rem;
@@ -82,7 +82,11 @@ header {
     // border: 0.5px solid orangered;
     padding-left: 2rem;
     padding-right: 2rem;
+    position: sticky;
+    z-index: 999999;
     background-color: white;
+    top: 0;
+
 
     nav {
         // border: 0.5px solid blue;
@@ -227,7 +231,7 @@ header {
     align-items: center;
     padding-left: 7.2rem;
     position: sticky;
-    top: 0;
+    top: 6.55rem;
     z-index: 99999;
 
 
@@ -395,18 +399,33 @@ header {
 
     #tabs-buttons-container {
         margin-top: 2rem;
+        position: relative;
+        display: flex;
 
-        button {
-            position: relative;
-            @include tab()  
-        }
+        
 
         .star-svg {
             width: 0.8em;
             height: 0.8em;
             position: absolute;
             bottom: 1.5em;
-            margin-left: 2px
+            margin-left: 2px;
+        }
+
+        #secLine {
+            position: absolute;
+            left: 0;
+            height: 4px;
+            width: 0;
+            bottom: 0px;
+            background: $sb-green;
+            transition: 0.3s;
+
+        }
+
+        #tab {
+            
+            @include tab();  
         }
     }
 }
@@ -420,10 +439,12 @@ header {
     }
 
     #tab-panels {
+
         .tab-panel-flex {
             display: flex;
             justify-content: center;
             align-items: center;
+            
 
             .drink-img {
                 width: 27em;
