@@ -379,6 +379,10 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   padding-left: 2rem;
   cursor: pointer;
 }
+#tabs-container #tabs-buttons-container #tab div {
+  pointer-events: none;
+  cursor: default;
+}
 #tabs-container #tabs-buttons-container #tab span {
   font-size: 20pt;
   font-weight: 600;
