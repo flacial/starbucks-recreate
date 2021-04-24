@@ -31,6 +31,11 @@ $dark-wheat: rgba(255, 255, 255, 0.8);
     padding-left: 2rem;
     cursor: pointer;
 
+    div {
+        pointer-events: none;
+        cursor: default;
+    }
+
     span {
         font-size: 20pt;
         font-weight: 600;
@@ -402,8 +407,6 @@ header {
         position: relative;
         display: flex;
 
-        
-
         .star-svg {
             width: 0.8em;
             height: 0.8em;
@@ -424,7 +427,6 @@ header {
         }
 
         #tab {
-            
             @include tab();  
         }
     }
