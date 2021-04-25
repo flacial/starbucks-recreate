@@ -45,9 +45,9 @@ $dark-wheat: rgba(255, 255, 255, 0.8);
 @mixin flex-max() {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     justify-items: center;
     align-items: center;
+    flex: 1 1 200px;
 }
 
 @mixin circle($margin) {
@@ -168,7 +168,7 @@ header {
             #nav-buttons {
                 display: flex;
                 align-items: center;
-                margin-right: 1rem; //add this to get some space in the right of all buttons
+                // margin-right: 1rem; //add this to get some space in the right of all buttons
 
                 #location-button-container {
                     margin-right: 3rem; //add this to get some space in the right of the location button
@@ -274,12 +274,17 @@ header {
             padding-right: 2rem;
             
             span,
-            h1,
             p,
             a {
                 color: $light-wheat;
                 font-weight: 600;
                 
+            }
+
+            h1 {
+                color: $light-wheat;
+                font-weight: 700;
+                font-size: 28pt;
             }
 
             #terms-link {
@@ -324,16 +329,19 @@ header {
     justify-content: center;
     padding-left: 4rem;
     padding-right: 4rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 
-    #steps-height {
-        padding-bottom: 39.6%;
-    }
+    // #steps-height {
+    //     padding-bottom: 39.6%;
+    // }
 
     #steps-content {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
 
         p {
             font-weight: 500;
@@ -347,6 +355,7 @@ header {
         display: flex;
         margin-top: 3rem;
         align-items: flex-start;
+        flex-wrap: wrap;
 
         h1 {
             font-size: 1.1rem;
@@ -442,7 +451,7 @@ header {
 
     #tab-panels {
         position: relative;
-        padding-bottom: 21%;
+        padding-bottom: 3rem;
         display: flex;
         justify-content: center;
 
@@ -464,9 +473,14 @@ header {
             margin-top: 2rem;
             
             .drink-img {
-                width: 22em;
-                height: 12em;
+                max-width: 100%;
+                width: 100%;
+                height: auto;
                 margin-right: 5rem;
+            }
+            
+            .drink-img-container {
+                max-width: 360px;
             }
 
             .tab-panel-text {

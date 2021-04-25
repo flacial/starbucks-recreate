@@ -40,9 +40,10 @@ const tabPanelsRemover = (tab) => {
     // Loops through 1 to 6 except the tab number while adding hide to the elements and removing show.
     for (let i = 1; i < 6; i++) {
         if (i !== tab) {
-            const tabPanel = document.querySelector(`#tab-panel-${i}`)
-            tabPanel.classList.add('hide')
-            tabPanel.classList.remove('show')
+            const tabPanel = document.querySelector(`#tab-panel-${i}`);
+            tabPanel.classList.add('hide');
+            tabPanel.style.position = 'absolute';
+            tabPanel.classList.remove('show');
         }
         
     }
@@ -70,6 +71,7 @@ tabs.forEach(Link => {
         // Checks if button id (1) is equal to the tab id (1), if they're equal add the show class to the tabpanel and remove the hide class and hide all the rest of the tabpanels
         if (id === tabPanelId(id)) {
             tabPanel(id).classList.add('show')
+            tabPanel(id).style.position = 'static'
             tabPanel(id).classList.remove('hide')
             tabPanelsRemover(id)
         }
