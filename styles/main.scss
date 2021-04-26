@@ -1,9 +1,18 @@
+// Colors
 $gray-color: #1e3932;
 $light-cyan: #d4e9e2;
 $light-wheat: #f3f1e7;
 $sb-green: #008248;
 $light-sky: #f1f8f6;
 $dark-wheat: rgba(255, 255, 255, 0.8);
+
+// Sizes
+$space-sm: 0.25rem;
+$space-med: 0.5rem;
+$space-lg: 1rem;
+$space-xl: 2rem;
+$space-xxl: 4rem;
+
 
 @mixin button($radius, $background, $border, $color, $hover-color, $hover-background) {
     border-radius: $radius;
@@ -322,72 +331,63 @@ header {
     }
 }
 
-#steps-container {
+.head-par {
+    text-align: center;
+    margin-bottom: 5rem;
+
+    h1, p {
+        color: $gray-color
+    }
+}
+
+.step {
+    max-width: 320px;
+    height: 100%;
+    text-align: center;
     display: flex;
-    background-color: white;
-    align-items: center;
-    justify-content: center;
-    padding-left: 4rem;
-    padding-right: 4rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
 
-    // #steps-height {
-    //     padding-bottom: 39.6%;
-    // }
-
-    #steps-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-
-        p {
-            font-weight: 500;
-        }
-        a {
-            color: $sb-green
-        }
+    h1 {
+        font-size: 1.2rem;
+        margin-bottom: $space-lg;
     }
 
+    p {
+        line-height: 1.3;
+        font-weight: 500;
+    }
+
+    .circle {
+        border: 2px solid $sb-green;
+        border-radius: 100%;
+        padding: 0.7rem;
+        padding-right: 0.8em;
+        padding-left: 0.8em;
+        font-weight: 800;
+        font-size: 1.5rem;
+        color: #007440;
+    }
+
+    .circle-con {
+        margin-bottom: $space-xl;
+    }
+}
+
+#steps-container {
+    padding: $space-xl;
+
     #steps {
-        display: flex;
-        margin-top: 3rem;
-        align-items: flex-start;
-        flex-wrap: wrap;
+        display: grid;
+        grid-row-gap: 96px;
+        grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+        place-items: center;
+        grid-column-gap: 2rem;
+    }
 
-        h1 {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        p {
-            font-weight: 600;
-            margin-top: 1rem;
-            line-height: 1.5rem;
-            font-size: 0.9rem;
-        }
-
-        #step-1 {
-            @include flex-max();
-            @include circle(2em);
-            text-align: center;
-            margin-right: 2rem;
-        }
-        #step-2 {
-            @include flex-max();
-            @include circle(2em);
-            text-align: center;
-            margin-right: 2rem;
-            margin-left: 2rem;
-        }
-        #step-3 {
-            @include flex-max();
-            @include circle(2em);
-            text-align: center;
-            margin-left: 2rem;
-        }
+    a {
+        color: $sb-green
     }
 }
 
