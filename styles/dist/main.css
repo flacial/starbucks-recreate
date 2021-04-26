@@ -42,11 +42,12 @@
   .tab-panel-flex {
     grid-template-rows: 1fr 11rem;
     grid-template-columns: none !important;
+    justify-items: center;
   }
 
   .tab-panel-text {
     text-align: center;
-    width: 24rem !important;
+    width: auto !important;
   }
 
   .drink-img-container {
@@ -371,7 +372,6 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   position: absolute;
   left: 0;
   height: 4px;
-  width: 96px;
   bottom: 0px;
   background: #008248;
   transition: 0.3s;
@@ -417,7 +417,7 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   grid-template-columns: 1fr 1fr;
   row-gap: 2rem;
   margin-top: 2rem;
-  justify-items: center;
+  place-items: center;
 }
 #tab-panels-container #tab-panels .tab-panel-flex .drink-img {
   max-width: 100%;

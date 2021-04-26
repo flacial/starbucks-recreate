@@ -4,7 +4,12 @@ const $ = query => document.querySelector(query)
 let line = document.querySelector('#line');
 let item = document.querySelectorAll('#anchor');
 
+const tab1 = document.querySelector('#tab-1')
 let secLine = document.querySelector('#secLine');
+
+// Change secLine width to tab button width
+secLine.style.width = `${tab1.clientWidth}px`
+
 let tabs = document.querySelectorAll('.tab');
 
 let header = document.getElementById("nav-links");

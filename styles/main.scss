@@ -59,11 +59,12 @@ $space-xxl: 4rem;
     .tab-panel-flex {
         grid-template-rows: 1fr 11rem;
         grid-template-columns: none !important;
+        justify-items: center;
     }
 
     .tab-panel-text {
         text-align: center;
-        width: 24rem !important;
+        width: auto !important;
     }
 
     .drink-img-container {
@@ -482,7 +483,6 @@ header {
             position: absolute;
             left: 0;
             height: 4px;
-            width: 96px;
             bottom: 0px;
             background: $sb-green;
             transition: 0.3s;
@@ -521,7 +521,7 @@ header {
             grid-template-columns: 1fr 1fr;
             row-gap: 2rem;
             margin-top: 2rem;
-            justify-items: center;
+            place-items: center;
             
             .drink-img {
                 max-width: 100%;
