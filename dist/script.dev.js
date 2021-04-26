@@ -42,7 +42,6 @@ drinkImg = document.querySelector('.drink-img');
 
 function imgSlider(images, g) {
   document.querySelector('.drink-img').src = images;
-  drinkImg.style.transition = g;
 }
 
 function hChanger(h1) {

@@ -44,8 +44,8 @@ drinkImg = document.querySelector('.drink-img');
 
 function imgSlider(images, g) {
     document.querySelector('.drink-img').src = images;
-    drinkImg.style.transition = g;
 }
+
 
 function hChanger(h1) {
     document.querySelector('.tab-panel-text span').innerHTML = h1;
@@ -79,4 +79,3 @@ function pChanger(p) {
 //       },
 //     ],
 //   };
-
