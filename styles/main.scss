@@ -26,6 +26,63 @@ $space-xxl: 4rem;
     }
 }
 
+@media only screen and (max-width: 1126px) {
+    #hero-container {
+        background-position: 60% !important;
+        background-size: cover !important;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    #nav-global {
+        display: none !important;
+    }
+    #logo-container {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    #tabs-container {
+        padding-right: 1em;
+        padding-left: 1em;
+
+        .tab {
+            padding-right: 0.9rem !important;
+            padding-left: 0.9rem !important;
+            span {
+                font-size: 14pt !important;
+            }
+        }
+    }
+    .tab-panel-flex {
+        grid-template-rows: 1fr 11rem;
+        grid-template-columns: none !important;
+    }
+
+    .tab-panel-text {
+        text-align: center;
+        width: 24rem !important;
+    }
+
+    .drink-img-container {
+        max-width: 100% !important;
+    }
+
+    #tab-panels {
+        padding-bottom: 0 !important;
+    }
+    
+}
+
+@media only screen and (max-width : 780px) {
+    #nav-buttons {
+        display: none !important;
+    }
+}
+
+
 @mixin button($radius, $background, $border, $color, $hover-color, $hover-background) {
     border-radius: $radius;
     background: $background;
@@ -402,11 +459,6 @@ header {
     box-shadow: 0px 3px 20px -15px rgba(0, 0, 0, 1);
     position: relative;
 
-
-    // #tabs-height {
-    //     // padding-bottom: 15.6%;
-    // }
-
     h1 {
         margin-top: 3rem;
         font-size: 21pt;
@@ -416,6 +468,7 @@ header {
         margin-top: 2rem;
         position: relative;
         display: flex;
+        justify-content: space-between;
 
         .star-svg {
             width: 0.8em;
@@ -446,10 +499,6 @@ header {
     background-color: $light-cyan;
     margin-bottom: 8rem;
 
-    // #tab-panels-height {
-    //     padding-bottom: 30.6%;
-    // }
-
     #tab-panels {
         position: relative;
         padding-bottom: 3rem;
@@ -468,16 +517,16 @@ header {
             position: absolute;
             transition: .3s ease-in-out;
             transition-property: opacity, visibility;
-            justify-content: center;
-            align-items: center;
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 2rem;
             margin-top: 2rem;
+            justify-items: center;
             
             .drink-img {
                 max-width: 100%;
                 width: 100%;
                 height: auto;
-                margin-right: 5rem;
             }
             
             .drink-img-container {

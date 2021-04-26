@@ -10,6 +10,58 @@
     top: 0 !important;
   }
 }
+@media only screen and (max-width: 1126px) {
+  #hero-container {
+    background-position: 60% !important;
+    background-size: cover !important;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #nav-global {
+    display: none !important;
+  }
+
+  #logo-container {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+@media only screen and (max-width: 560px) {
+  #tabs-container {
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+  #tabs-container .tab {
+    padding-right: 0.9rem !important;
+    padding-left: 0.9rem !important;
+  }
+  #tabs-container .tab span {
+    font-size: 14pt !important;
+  }
+
+  .tab-panel-flex {
+    grid-template-rows: 1fr 11rem;
+    grid-template-columns: none !important;
+  }
+
+  .tab-panel-text {
+    text-align: center;
+    width: 24rem !important;
+  }
+
+  .drink-img-container {
+    max-width: 100% !important;
+  }
+
+  #tab-panels {
+    padding-bottom: 0 !important;
+  }
+}
+@media only screen and (max-width: 780px) {
+  #nav-buttons {
+    display: none !important;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -306,6 +358,7 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   margin-top: 2rem;
   position: relative;
   display: flex;
+  justify-content: space-between;
 }
 #tabs-container #tabs-buttons-container .star-svg {
   width: 0.8em;
@@ -360,16 +413,16 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   position: absolute;
   transition: 0.3s ease-in-out;
   transition-property: opacity, visibility;
-  justify-content: center;
-  align-items: center;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2rem;
   margin-top: 2rem;
+  justify-items: center;
 }
 #tab-panels-container #tab-panels .tab-panel-flex .drink-img {
   max-width: 100%;
   width: 100%;
   height: auto;
-  margin-right: 5rem;
 }
 #tab-panels-container #tab-panels .tab-panel-flex .drink-img-container {
   max-width: 360px;
