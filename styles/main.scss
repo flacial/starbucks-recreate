@@ -617,6 +617,107 @@ header {
     }
 }
 
+#inst-container {
+    margin-top: 8rem;
+    background-color: #f3f1e7;
+    padding: 4rem;
+    padding-bottom: 15rem;
+    justify-content: center;
+
+    .head-par {
+        display: grid;
+        place-items: center;
+        margin-bottom: 5rem;
+    
+        h1, p {
+            color: $gray-color
+        }
+
+        p {
+            max-width: 500px;
+            margin-top: 1.5rem;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-size: 20pt;
+        }
+    }
+    
+    
+    #inst-size {
+        padding-bottom: 60%;
+    }
+
+    #inst-grid {
+        display: grid;
+        grid-template-rows: 8rem 40px 8rem 40px 8rem;
+        row-gap: 2rem;
+        
+        .inst {
+            display: grid;
+            grid-template-columns: 0.6fr 1fr 1.5fr;
+            row-gap: 2rem;
+
+            .big {
+                font-size: 15pt;
+                font-weight: 700;
+
+                .star-symbol {
+                    font-size: 10pt;
+                    color: black;
+                }
+            }
+            
+            .inst-num {
+                p {
+                    font-weight: 600;
+                    font-size: 15px;
+                    margin: 0;
+                    margin-top: .5rem;
+                    line-height: 1.5;
+                    max-width: 12rem;
+                }
+            }
+
+            .inst-child {
+                display: grid;
+                grid-template-columns: auto 2fr;
+
+                img {
+                    margin-right: 1rem;
+                }
+
+                .inst-content {
+                    p {
+                        font-weight: 600;
+                        font-size: 11pt;
+                        margin-top: 1rem;
+                        line-height: 1.8;
+                        max-width: 16rem;
+                    }
+
+                    .inst-child-title {
+                        font-weight: 700;
+                        font-size: 13pt;
+                    }
+
+                    #link-svg, a, a > span {
+                        stroke: $sb-green;
+                        color: $sb-green;
+                    }
+                }
+            }
+        }
+
+        hr {
+            border-color: rgb(214, 214, 214);
+            border-left: none;
+            border-top: none;
+        }
+    }
+}
+
 .block {
     display: block;
 }

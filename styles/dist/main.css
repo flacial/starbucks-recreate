@@ -498,6 +498,86 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   margin-bottom: 1.5rem;
 }
 
+#inst-container {
+  margin-top: 8rem;
+  background-color: #f3f1e7;
+  padding: 4rem;
+  padding-bottom: 15rem;
+  justify-content: center;
+}
+#inst-container .head-par {
+  display: grid;
+  place-items: center;
+  margin-bottom: 5rem;
+}
+#inst-container .head-par h1, #inst-container .head-par p {
+  color: #1e3932;
+}
+#inst-container .head-par p {
+  max-width: 500px;
+  margin-top: 1.5rem;
+  font-weight: 500;
+}
+#inst-container .head-par h1 {
+  font-size: 20pt;
+}
+#inst-container #inst-size {
+  padding-bottom: 60%;
+}
+#inst-container #inst-grid {
+  display: grid;
+  grid-template-rows: 8rem 40px 8rem 40px 8rem;
+  row-gap: 2rem;
+}
+#inst-container #inst-grid .inst {
+  display: grid;
+  grid-template-columns: 0.6fr 1fr 1.5fr;
+  row-gap: 2rem;
+}
+#inst-container #inst-grid .inst .big {
+  font-size: 15pt;
+  font-weight: 700;
+}
+#inst-container #inst-grid .inst .big .star-symbol {
+  font-size: 10pt;
+  color: black;
+}
+#inst-container #inst-grid .inst .inst-num p {
+  font-weight: 600;
+  font-size: 15px;
+  margin: 0;
+  margin-top: 0.5rem;
+  line-height: 1.5;
+  max-width: 12rem;
+}
+#inst-container #inst-grid .inst .inst-child {
+  display: grid;
+  grid-template-columns: auto 2fr;
+}
+#inst-container #inst-grid .inst .inst-child img {
+  margin-right: 1rem;
+}
+#inst-container #inst-grid .inst .inst-child .inst-content p {
+  font-weight: 600;
+  font-size: 11pt;
+  margin-top: 1rem;
+  line-height: 1.8;
+  max-width: 16rem;
+}
+#inst-container #inst-grid .inst .inst-child .inst-content .inst-child-title {
+  font-weight: 700;
+  font-size: 13pt;
+}
+#inst-container #inst-grid .inst .inst-child .inst-content #link-svg, #inst-container #inst-grid .inst .inst-child .inst-content a, #inst-container #inst-grid .inst .inst-child .inst-content a > span {
+  stroke: #008248;
+  color: #008248;
+}
+#inst-container #inst-grid hr {
+  border-color: #d6d6d6;
+  border-left: none;
+  border-top: none;
+}
+
 .block {
   display: block;
 }
