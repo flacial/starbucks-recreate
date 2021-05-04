@@ -8,40 +8,58 @@ const tab1 = document.querySelector('#tab-1')
 let secLine = document.querySelector('#secLine');
 
 // Change secLine width to tab button width
-secLine.style.width = `${tab1.clientWidth}px`
+secLine.style.width = `${tab1.clientWidth}px`;
 
 let tabs = document.querySelectorAll('.tab');
 
 let header = document.getElementById("nav-links");
 let btns = header.getElementsByClassName("anchor");
 
+const input = $('input');
+const label = $('label');
+
+input.addEventListener('focus', e => {
+    label.style.bottom = '2.2rem';
+    label.classList.add('animate-input-show');
+})
+
+input.addEventListener('blur', e => {
+    if (!input.value.length) {
+        label.style.bottom = '10px';
+        label.classList.remove('animate-input-show');
+    }
+})
+
+
+
+
 for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
+    btns[i].addEventListener("click", function () {
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
     });
 }
 
 function indicator(e) {
-    line.style.left = e.offsetLeft+"px";
-    line.style.width = e.offsetWidth+"px";
+    line.style.left = e.offsetLeft + "px";
+    line.style.width = e.offsetWidth + "px";
 }
 
 item.forEach(Link => {
-    Link.addEventListener('click', (e)=> {
+    Link.addEventListener('click', (e) => {
         indicator(e.target);
     })
 })
 
 function secIndicator(e) {
-    secLine.style.left = e.offsetLeft+"px";
-    secLine.style.width = e.offsetWidth+"px";
+    secLine.style.left = e.offsetLeft + "px";
+    secLine.style.width = e.offsetWidth + "px";
 }
 
 // Make all the tabpanels hidden except the one called tab
 const tabPanelsRemover = (tab) => {
-    
+
     // Loops through 1 to 6 except the tab number while adding hide to the elements and removing show.
     for (let i = 1; i < 6; i++) {
         if (i !== tab) {
@@ -50,16 +68,16 @@ const tabPanelsRemover = (tab) => {
             tabPanel.style.position = 'absolute';
             tabPanel.classList.remove('show');
         }
-        
+
     }
 }
 
 
 
 tabs.forEach(Link => {
-    Link.addEventListener('click', (e)=> {
+    Link.addEventListener('click', (e) => {
         secIndicator(e.target);
-        
+
         // Slice the last value of the button id which is a number like 1 or 5
         const id = Number(e.target.id[e.target.id.length - 1])
 

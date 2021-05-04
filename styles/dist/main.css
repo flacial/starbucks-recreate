@@ -1,3 +1,9 @@
+@media only screen and (max-width: 1126px) {
+  #hero-container {
+    background-position: 60% !important;
+    background-size: cover !important;
+  }
+}
 @media only screen and (max-width: 1040px) {
   header {
     background-color: green;
@@ -10,23 +16,39 @@
     top: 0 !important;
   }
 }
-@media only screen and (max-width: 1126px) {
-  #hero-container {
-    background-position: 60% !important;
-    background-size: cover !important;
+@media only screen and (max-width: 980px) {
+  #inst-container {
+    padding-bottom: 4rem !important;
   }
-}
-@media only screen and (max-width: 450px) {
-  #nav-global {
-    display: none !important;
+  #inst-container #inst-grid {
+    grid-template-rows: none !important;
+  }
+  #inst-container #inst-grid .inst {
+    grid-template-columns: 1fr !important;
   }
 
-  #logo-container {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+  #codes {
+    padding-right: 10rem !important;
+    padding-left: 10rem !important;
+  }
+}
+@media only screen and (max-width: 780px) {
+  #nav-buttons {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 690px) {
+  #codes {
+    padding-right: 5rem !important;
+    padding-left: 5rem !important;
   }
 }
 @media only screen and (max-width: 560px) {
+  #codes {
+    padding-right: 2rem !important;
+    padding-left: 2rem !important;
+  }
+
   #tabs-container {
     padding-right: 1em;
     padding-left: 1em;
@@ -57,10 +79,19 @@
   #tab-panels {
     padding-bottom: 0 !important;
   }
+
+  #inst-container {
+    padding: 4rem 1rem 4rem 2rem !important;
+  }
 }
-@media only screen and (max-width: 780px) {
-  #nav-buttons {
+@media only screen and (max-width: 450px) {
+  #nav-global {
     display: none !important;
+  }
+
+  #logo-container {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
   }
 }
 * {
@@ -178,12 +209,14 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #sign-in {
   font-family: Raleway;
   font-weight: 700;
   cursor: pointer;
+  user-select: none;
   transition: color 0.1s ease-in-out, background 0.1s ease-in-out;
   margin-right: 1rem;
 }
 header nav #nav-global #nav-buttons #sign-in-buttons-container #sign-in:hover {
   color: inherit;
   background: rgba(0, 0, 0, 0.1);
+  border-color: none;
 }
 header nav #nav-global #nav-buttons #sign-in-buttons-container #join {
   border-radius: 30px;
@@ -194,11 +227,13 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join {
   font-family: Raleway;
   font-weight: 700;
   cursor: pointer;
+  user-select: none;
   transition: color 0.1s ease-in-out, background 0.1s ease-in-out;
 }
 header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   color: #f3f1e7;
   background: rgba(0, 0, 0, 0.8);
+  border-color: none;
 }
 
 #under-header {
@@ -274,6 +309,7 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   font-family: Raleway;
   font-weight: 700;
   cursor: pointer;
+  user-select: none;
   transition: color 0.1s ease-in-out, background 0.1s ease-in-out;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -281,6 +317,7 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
 #hero-container #hero-text-container #hero-text #hero-text-width #Join-two-button:hover {
   color: #f3f1e7;
   background: #006638;
+  border-color: none;
 }
 #hero-container #hero-text-container #hero-text #hero-text-width #link-svg {
   stroke: #f3f1e7;
@@ -292,7 +329,8 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   text-align: center;
   margin-bottom: 5rem;
 }
-.head-par h1, .head-par p {
+.head-par h1,
+.head-par p {
   color: #1e3932;
 }
 
@@ -393,6 +431,14 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   font-weight: 600;
 }
 
+.show {
+  opacity: 1;
+}
+
+.hide {
+  opacity: 0;
+}
+
 #tab-panels-container {
   background-color: #d4e9e2;
   margin-bottom: 8rem;
@@ -402,12 +448,6 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   padding-bottom: 3rem;
   display: flex;
   justify-content: center;
-}
-#tab-panels-container #tab-panels .show {
-  opacity: 1;
-}
-#tab-panels-container #tab-panels .hide {
-  opacity: 0;
 }
 #tab-panels-container #tab-panels .tab-panel-flex {
   position: absolute;
@@ -501,7 +541,7 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
 #inst-container {
   margin-top: 8rem;
   background-color: #f3f1e7;
-  padding: 4rem;
+  padding: 4rem 4rem 4rem 4rem;
   padding-bottom: 15rem;
   justify-content: center;
 }
@@ -510,7 +550,8 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   place-items: center;
   margin-bottom: 5rem;
 }
-#inst-container .head-par h1, #inst-container .head-par p {
+#inst-container .head-par h1,
+#inst-container .head-par p {
   color: #1e3932;
 }
 #inst-container .head-par p {
@@ -531,7 +572,7 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
 }
 #inst-container #inst-grid .inst {
   display: grid;
-  grid-template-columns: 0.6fr 1fr 1.5fr;
+  grid-template-columns: 1fr 2fr 2fr;
   row-gap: 2rem;
 }
 #inst-container #inst-grid .inst .big {
@@ -568,7 +609,9 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   font-weight: 700;
   font-size: 13pt;
 }
-#inst-container #inst-grid .inst .inst-child .inst-content #link-svg, #inst-container #inst-grid .inst .inst-child .inst-content a, #inst-container #inst-grid .inst .inst-child .inst-content a > span {
+#inst-container #inst-grid .inst .inst-child .inst-content #link-svg,
+#inst-container #inst-grid .inst .inst-child .inst-content a,
+#inst-container #inst-grid .inst .inst-child .inst-content a > span {
   stroke: #008248;
   color: #008248;
 }
@@ -576,6 +619,113 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   border-color: #d6d6d6;
   border-left: none;
   border-top: none;
+  border-right: none;
+}
+
+#contact {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+#contact #codes {
+  padding-left: 15rem;
+  padding-right: 15rem;
+}
+#contact #codes .codes-head {
+  margin-bottom: 3rem;
+}
+#contact #codes .codes-head span {
+  font-weight: 700;
+  font-size: 30px;
+}
+#contact #codes .codes-head p {
+  margin-top: 1.6rem;
+  font-weight: 600;
+  max-width: 33rem;
+  font-size: 14px;
+}
+#contact #codes .input-container {
+  max-width: 33rem;
+  position: relative;
+}
+#contact #codes .input-container input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #d6d6d6;
+  padding-bottom: 0.6em;
+  padding-right: 8rem;
+  color: black;
+  font-weight: 700;
+  font-size: 16px;
+  background-color: transparent;
+}
+#contact #codes .input-container input:focus {
+  outline: none;
+  border-color: gray;
+}
+#contact #codes .input-container button {
+  border-radius: 20px;
+  background: white;
+  border: 1px solid black;
+  color: black;
+  padding: 8px 18px 8px 18px;
+  font-family: Raleway;
+  font-weight: 700;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.1s ease-in-out, background 0.1s ease-in-out;
+  position: absolute;
+  right: 0;
+  bottom: 10px;
+  font-size: 15px;
+}
+#contact #codes .input-container button:hover {
+  color: #008248;
+  background: none;
+  border-color: #008248;
+}
+#contact #codes .input-container div {
+  position: relative;
+}
+#contact #codes .input-container label {
+  font-size: 14px;
+  color: gray;
+  font-weight: 500;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  bottom: 10px;
+  transition: bottom 0.3s ease-in-out;
+  user-select: none;
+}
+#contact #codes .input-container .animate-input-show {
+  animation: inputShow 0.4s ease-in-out;
+}
+@keyframes inputShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#contact #codes .receipt-container {
+  margin-top: 2rem;
+}
+#contact #codes .receipt-container span,
+#contact #codes .receipt-container p {
+  font-size: 0.8em;
+  font-weight: 600;
+}
+#contact #codes .receipt-container p {
+  margin-top: 0.3em;
+}
+#contact #codes .receipt-container a,
+#contact #codes .receipt-container svg {
+  color: #008248;
+  stroke: #008248;
+}
+#contact #codes .receipt-container a {
+  margin-right: 5px;
 }
 
 .block {
