@@ -13,134 +13,13 @@ $space-lg: 1rem;
 $space-xl: 2rem;
 $space-xxl: 4rem;
 
-@media only screen and (max-width: 1126px) {
-  #hero-container {
-    background-position: 60% !important;
-    background-size: cover !important;
-  }
-}
-
-@media only screen and (max-width: 1040px) {
-  header {
-    background-color: green;
-    position: static !important;
-    z-index: auto;
-    top: none;
-  }
-
-  #under-header {
-    top: 0 !important;
-  }
-}
-
-@media only screen and (max-width: 980px) {
-  #inst-container {
-    padding-bottom: 4rem !important;
-
-    #inst-grid {
-      grid-template-rows: none !important;
-
-      .inst {
-        grid-template-columns: 1fr !important;
-      }
-    }
-  }
-
-  #contact {
-    padding-right: 10rem !important;
-    padding-left: 10rem !important;
-  }
-}
-
-@media only screen and (max-width: 780px) {
-  #nav-buttons {
-    display: none !important;
-  }
-}
-
-@media only screen and (max-width: 690px) {
-  #contact {
-    padding-right: 5rem !important;
-    padding-left: 5rem !important;
-  }
-}
-
-@media only screen and (max-width: 560px) {
-  #under-header {
-    padding-left: 1.2rem !important;
-  }
-
-  #contact {
-    padding-right: 2rem !important;
-    padding-left: 2rem !important;
-  }
-
-  #tabs-container {
-    padding-right: 1em;
-    padding-left: 1em;
-
-    .tab {
-      padding-right: 0.9rem !important;
-      padding-left: 0.9rem !important;
-
-      span {
-        font-size: 12pt !important;
-      }
-    }
-  }
-
-  .tab-panel-flex {
-    grid-template-rows: 1fr 11rem;
-    grid-template-columns: none !important;
-    justify-items: center;
-  }
-
-  .tab-panel-text {
-    text-align: center;
-    width: auto !important;
-  }
-
-  .drink-img-container {
-    max-width: 100% !important;
-  }
-
-  #tab-panels {
-    padding-bottom: 0 !important;
-  }
-
-  #inst-container {
-    padding: 4rem 1rem 4rem 2rem !important;
-  }
-}
-
-@media only screen and (max-width: 450px) {
-  #nav-global {
-    display: none !important;
-  }
-
-  #logo-container {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-}
-
-@media only screen and (max-width: 330px) {
-  .input-container {
-    label {
-      font-size: 12px !important;
-    }
-  }
-}
-
-@mixin button(
-  $radius,
+@mixin button($radius,
   $background,
   $border,
   $color,
   $hover-color,
   $hover-background,
-  $border-color
-) {
+  $border-color) {
   border-radius: $radius;
   background: $background;
   border: $border;
@@ -335,28 +214,24 @@ header {
 
         #sign-in-buttons-container {
           #sign-in {
-            @include button(
-              30px,
+            @include button(30px,
               none,
               1px solid black,
               inherit,
               inherit,
               rgba(0, 0, 0, 0.1),
-              none
-            );
+              none);
             margin-right: 1rem; //add this to get some space in the right of the dign in button
           }
 
           #join {
-            @include button(
-              30px,
+            @include button(30px,
               black,
               none,
               $light-wheat,
               $light-wheat,
               rgba(0, 0, 0, 0.8),
-              none
-            );
+              none);
           }
         }
       }
@@ -422,6 +297,7 @@ header {
 
       #terms-link {
         &:hover {
+
           &,
           span,
           #link-svg {
@@ -439,15 +315,13 @@ header {
         width: 60%;
 
         #Join-two-button {
-          @include button(
-            30px,
+          @include button(30px,
             $sb-green,
             none,
             $light-wheat,
             $light-wheat,
             #006638,
-            none
-          );
+            none);
           margin-top: 2rem;
           margin-bottom: 1rem;
         }
@@ -792,7 +666,7 @@ header {
 
           #link-svg,
           a,
-          a > span {
+          a>span {
             stroke: $sb-green;
             color: $sb-green;
           }
@@ -854,15 +728,13 @@ header {
       }
 
       button {
-        @include button(
-          20px,
+        @include button(20px,
           white,
           1px solid black,
           black,
           $sb-green,
           none,
-          $sb-green
-        );
+          $sb-green);
         position: absolute;
         right: 0;
         bottom: 10px;
@@ -935,3 +807,155 @@ header {
 .flex {
   display: flex;
 }
+
+@media only screen and (max-width: 1126px) {
+  #hero-container {
+    background-position: 60% !important;
+    background-size: cover !important;
+  }
+}
+
+@media only screen and (max-width: 1040px) {
+  header {
+    position: static !important;
+    top: none;
+  }
+
+  #under-header {
+    top: 0 !important;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  #inst-container {
+    padding-bottom: 4rem !important;
+
+    #inst-grid {
+      grid-template-rows: none !important;
+
+      .inst {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  }
+
+  #contact {
+    padding-right: 10rem !important;
+    padding-left: 10rem !important;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  #nav-buttons {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 690px) {
+  #contact {
+    padding-right: 5rem !important;
+    padding-left: 5rem !important;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  #under-header {
+    padding-left: 1.2rem !important;
+  }
+
+  #contact {
+    padding-right: 2rem !important;
+    padding-left: 2rem !important;
+  }
+
+  #tabs-container {
+    padding-right: 1em;
+    padding-left: 1em;
+
+    #tabs {
+      flex-grow: 1;
+
+      h1 {
+        font-size: 16pt;
+      }
+
+      #tabs-buttons-container {
+        .tab {
+          padding-right: 0.9rem !important;
+          padding-left: 0.9rem !important;
+  
+          span {
+            font-size: 15pt;
+          }
+        }
+      }
+    }
+
+  }
+
+
+  .tab-panel-flex {
+    grid-template-rows: 1fr 11rem;
+    grid-template-columns: none !important;
+    justify-items: center;
+  }
+
+  .tab-panel-text {
+    text-align: center;
+    width: auto !important;
+  }
+
+  .drink-img-container {
+    max-width: 100% !important;
+  }
+
+  #tab-panels {
+    padding-bottom: 0 !important;
+  }
+
+  #inst-container {
+    padding: 4rem 1rem 4rem 2rem !important;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  #nav-global {
+    display: none !important;
+  }
+
+  #logo-container {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 330px) {
+  .input-container {
+    label {
+      font-size: 12px !important;
+    }
+  }
+
+  #tabs-container {
+    #tabs-buttons-container {
+      .tab {
+        span {
+          font-size: 12pt;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
