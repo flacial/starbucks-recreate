@@ -43,7 +43,7 @@ for (var i = 0; i < btns.length; i++) {
 
 function indicator(e) {
     line.style.left = e.offsetLeft + "px";
-    // line.style.width = e.offsetWidth + "px";
+    line.style.width = e.offsetWidth + "px";
 }
 
 item.forEach(Link => {
@@ -78,8 +78,8 @@ const tabPanelsRemover = (tab) => {
             tabPanel.classList.add('hide');
             tabPanel.style.position = 'absolute';
             tabPanel.classList.remove('show');
+            tabPanel.style.zIndex = "";
         }
-
     }
 }
 

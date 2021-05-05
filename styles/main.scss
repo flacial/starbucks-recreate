@@ -46,7 +46,7 @@ $space-xxl: 4rem;
         }
     }
 
-    #codes {
+    #contact {
         padding-right: 10rem !important;
         padding-left: 10rem !important;
     }
@@ -59,14 +59,18 @@ $space-xxl: 4rem;
 }
 
 @media only screen and (max-width : 690px) {
-    #codes {
+    #contact {
         padding-right: 5rem !important;
         padding-left: 5rem !important;
     }
 }
 
 @media only screen and (max-width: 560px) {
-    #codes {
+    #under-header {
+        padding-left: 1.2rem !important;
+    }
+
+    #contact {
         padding-right: 2rem !important;
         padding-left: 2rem !important;
     }
@@ -80,7 +84,7 @@ $space-xxl: 4rem;
             padding-left: 0.9rem !important;
 
             span {
-                font-size: 14pt !important;
+                font-size: 12pt !important;
             }
         }
     }
@@ -120,6 +124,14 @@ $space-xxl: 4rem;
     }
 }
 
+@media only screen and (max-width: 330px) {
+    .input-container {
+        label {
+            font-size: 12px !important;
+        }
+    }
+}
+
 @mixin button($radius, $background, $border, $color, $hover-color, $hover-background, $border-color) {
     border-radius: $radius;
     background: $background;
@@ -146,6 +158,7 @@ $space-xxl: 4rem;
     padding-right: 2rem;
     padding-left: 2rem;
     cursor: pointer;
+    position: relative;
 
     div {
         pointer-events: none;
@@ -518,14 +531,25 @@ header {
             margin-left: 2px;
         }
 
-        #secLine {
+        .secLine {
             position: absolute;
             left: 0;
             height: 4px;
             bottom: 0px;
+            width: 100%;
             background: $sb-green;
             transition: 0.3s;
+        }
 
+        .secLineMinions {
+            position: absolute;
+            left: 0;
+            height: 4px;
+            bottom: 0px;
+            width: 100%;
+            background: $sb-green;
+            transition: 0.3s;
+            visibility: hidden;
         }
 
         .tab {
@@ -561,6 +585,7 @@ header {
             row-gap: 2rem;
             margin-top: 2rem;
             place-items: center;
+            z-index: 30;
 
             .drink-img {
                 max-width: 100%;
@@ -765,29 +790,21 @@ header {
     }
 }
 
-#contact {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+.text-head {
+    margin-bottom: 3rem;
 
-    #codes {
-        padding-left: 15rem;
-        padding-right: 15rem;
+    span {
+        font-weight: 700;
+        font-size: 30px;
+    }
 
-        .codes-head {
-            margin-bottom: 3rem;
-
-            span {
-                font-weight: 700;
-                font-size: 30px;
-            }
-
-            p {
-                margin-top: 1.6rem;
-                font-weight: 600;
-                max-width: 33rem;
-                font-size: 14px
-            }
-        }
+    p {
+        margin-top: 1.6rem;
+        font-weight: 600;
+        max-width: 33rem;
+        font-size: 14px
+    }
+}
 
 #contact {
     padding-top: 7rem;
@@ -865,19 +882,12 @@ header {
                 font-weight: 600;
             }
 
-            p {
-                margin-top: 0.3em;
-            }
-
             a,
             svg {
                 color: $sb-green;
                 stroke: $sb-green;
             }
-
-            a {
-                margin-right: 5px;
-            }
+        }
     }
 
     #questions {

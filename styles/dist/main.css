@@ -27,7 +27,7 @@
     grid-template-columns: 1fr !important;
   }
 
-  #codes {
+  #contact {
     padding-right: 10rem !important;
     padding-left: 10rem !important;
   }
@@ -38,13 +38,17 @@
   }
 }
 @media only screen and (max-width: 690px) {
-  #codes {
+  #contact {
     padding-right: 5rem !important;
     padding-left: 5rem !important;
   }
 }
 @media only screen and (max-width: 560px) {
-  #codes {
+  #under-header {
+    padding-left: 1.2rem !important;
+  }
+
+  #contact {
     padding-right: 2rem !important;
     padding-left: 2rem !important;
   }
@@ -58,7 +62,7 @@
     padding-left: 0.9rem !important;
   }
   #tabs-container .tab span {
-    font-size: 14pt !important;
+    font-size: 12pt !important;
   }
 
   .tab-panel-flex {
@@ -92,6 +96,11 @@
   #logo-container {
     margin-top: 1rem;
     margin-bottom: 1rem;
+  }
+}
+@media only screen and (max-width: 330px) {
+  .input-container label {
+    font-size: 12px !important;
   }
 }
 * {
@@ -406,13 +415,24 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   bottom: 1.5em;
   margin-left: 2px;
 }
-#tabs-container #tabs-buttons-container #secLine {
+#tabs-container #tabs-buttons-container .secLine {
   position: absolute;
   left: 0;
   height: 4px;
   bottom: 0px;
+  width: 100%;
   background: #008248;
   transition: 0.3s;
+}
+#tabs-container #tabs-buttons-container .secLineMinions {
+  position: absolute;
+  left: 0;
+  height: 4px;
+  bottom: 0px;
+  width: 100%;
+  background: #008248;
+  transition: 0.3s;
+  visibility: hidden;
 }
 #tabs-container #tabs-buttons-container .tab {
   border: none;
@@ -421,6 +441,7 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   padding-right: 2rem;
   padding-left: 2rem;
   cursor: pointer;
+  position: relative;
 }
 #tabs-container #tabs-buttons-container .tab div {
   pointer-events: none;
@@ -458,6 +479,7 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   row-gap: 2rem;
   margin-top: 2rem;
   place-items: center;
+  z-index: 30;
 }
 #tab-panels-container #tab-panels .tab-panel-flex .drink-img {
   max-width: 100%;
@@ -622,26 +644,25 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   border-right: none;
 }
 
-#contact {
-  padding-top: 7rem;
-  padding-bottom: 7rem;
-}
-#contact #codes {
-  padding-left: 15rem;
-  padding-right: 15rem;
-}
-#contact #codes .codes-head {
+.text-head {
   margin-bottom: 3rem;
 }
-#contact #codes .codes-head span {
+.text-head span {
   font-weight: 700;
   font-size: 30px;
 }
-#contact #codes .codes-head p {
+.text-head p {
   margin-top: 1.6rem;
   font-weight: 600;
   max-width: 33rem;
   font-size: 14px;
+}
+
+#contact {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  padding-left: 15rem;
+  padding-right: 15rem;
 }
 #contact #codes .input-container {
   max-width: 33rem;
@@ -716,16 +737,18 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   font-size: 0.8em;
   font-weight: 600;
 }
-#contact #codes .receipt-container p {
-  margin-top: 0.3em;
-}
 #contact #codes .receipt-container a,
 #contact #codes .receipt-container svg {
   color: #008248;
   stroke: #008248;
 }
-#contact #codes .receipt-container a {
-  margin-right: 5px;
+#contact #questions {
+  margin-top: 8rem;
+}
+#contact #questions a,
+#contact #questions svg {
+  color: #008248;
+  stroke: #008248;
 }
 
 .block {
