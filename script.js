@@ -5,10 +5,10 @@ let line = document.querySelector('#line');
 let item = document.querySelectorAll('#anchor');
 
 const tab1 = document.querySelector('#tab-1')
-let secLine = document.querySelector('#secLine');
+let secLine = document.querySelector('.secLine');
 
 // Change secLine width to tab button width
-secLine.style.width = `${tab1.clientWidth}px`;
+// secLine.style.width = `${tab1.clientWidth}px`;
 
 let tabs = document.querySelectorAll('.tab');
 
@@ -43,7 +43,7 @@ for (var i = 0; i < btns.length; i++) {
 
 function indicator(e) {
     line.style.left = e.offsetLeft + "px";
-    line.style.width = e.offsetWidth + "px";
+    // line.style.width = e.offsetWidth + "px";
 }
 
 item.forEach(Link => {
@@ -53,9 +53,20 @@ item.forEach(Link => {
 })
 
 function secIndicator(e) {
+    const mainSecLine = e.childNodes[5];
+    const minionSecLine = e.childNodes[3];
     secLine.style.left = e.offsetLeft + "px";
-    secLine.style.width = e.offsetWidth + "px";
+
+    if (minionSecLine?.classList?.[0] === "secLineMinions") {
+        secLine.style.width = minionSecLine.clientWidth + "px";
+    } else {
+        secLine.style.width = mainSecLine.clientWidth + "px"
+    }
 }
+
+window.addEventListener('resize', e => {
+    secLine.style.width = "100%"
+})
 
 // Make all the tabpanels hidden except the one called tab
 const tabPanelsRemover = (tab) => {
