@@ -107,6 +107,7 @@ tabs.forEach(Link => {
             tabPanel(id).classList.add('show')
             tabPanel(id).style.position = 'static'
             tabPanel(id).classList.remove('hide')
+            tabPanel(id).style.zIndex = "400"
             tabPanelsRemover(id)
         }
     })
