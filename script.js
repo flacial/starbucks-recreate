@@ -1,3 +1,9 @@
+//States
+let tpId = 1;
+let setTabPanelId = async (state) => {
+    tpId = await state;
+}
+
 // navbar link animation start
 const $ = (query) => document.querySelector(query);
 
@@ -62,7 +68,8 @@ function secIndicator(e) {
 }
 
 window.addEventListener("resize", (e) => {
-  secLine.style.width = "100%";
+  secLine.style.width = `${document.querySelector(`#tab-${tpId}`).clientWidth}px`;
+  secLine.style.left = `${document.querySelector(`#tab-${tpId}`).offsetLeft}px`;
 });
 
 // Make all the tabpanels hidden except the one called tab
@@ -85,6 +92,8 @@ tabs.forEach((Link) => {
 
     // Slice the last value of the button id which is a number like 1 or 5
     const id = Number(e.target.id[e.target.id.length - 1]);
+    setTabPanelId(id);
+
 
     // Slice the last value of the tab panel id which is also a number like 1 or 5
     const tabPanelId = (id) => {

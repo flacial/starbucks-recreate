@@ -1,108 +1,3 @@
-@media only screen and (max-width: 1126px) {
-  #hero-container {
-    background-position: 60% !important;
-    background-size: cover !important;
-  }
-}
-@media only screen and (max-width: 1040px) {
-  header {
-    background-color: green;
-    position: static !important;
-    z-index: auto;
-    top: none;
-  }
-
-  #under-header {
-    top: 0 !important;
-  }
-}
-@media only screen and (max-width: 980px) {
-  #inst-container {
-    padding-bottom: 4rem !important;
-  }
-  #inst-container #inst-grid {
-    grid-template-rows: none !important;
-  }
-  #inst-container #inst-grid .inst {
-    grid-template-columns: 1fr !important;
-  }
-
-  #contact {
-    padding-right: 10rem !important;
-    padding-left: 10rem !important;
-  }
-}
-@media only screen and (max-width: 780px) {
-  #nav-buttons {
-    display: none !important;
-  }
-}
-@media only screen and (max-width: 690px) {
-  #contact {
-    padding-right: 5rem !important;
-    padding-left: 5rem !important;
-  }
-}
-@media only screen and (max-width: 560px) {
-  #under-header {
-    padding-left: 1.2rem !important;
-  }
-
-  #contact {
-    padding-right: 2rem !important;
-    padding-left: 2rem !important;
-  }
-
-  #tabs-container {
-    padding-right: 1em;
-    padding-left: 1em;
-  }
-  #tabs-container .tab {
-    padding-right: 0.9rem !important;
-    padding-left: 0.9rem !important;
-  }
-  #tabs-container .tab span {
-    font-size: 12pt !important;
-  }
-
-  .tab-panel-flex {
-    grid-template-rows: 1fr 11rem;
-    grid-template-columns: none !important;
-    justify-items: center;
-  }
-
-  .tab-panel-text {
-    text-align: center;
-    width: auto !important;
-  }
-
-  .drink-img-container {
-    max-width: 100% !important;
-  }
-
-  #tab-panels {
-    padding-bottom: 0 !important;
-  }
-
-  #inst-container {
-    padding: 4rem 1rem 4rem 2rem !important;
-  }
-}
-@media only screen and (max-width: 450px) {
-  #nav-global {
-    display: none !important;
-  }
-
-  #logo-container {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-}
-@media only screen and (max-width: 330px) {
-  .input-container label {
-    font-size: 12px !important;
-  }
-}
 * {
   margin: 0;
   padding: 0;
@@ -757,4 +652,118 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
 
 .flex {
   display: flex;
+}
+
+@media only screen and (max-width: 1126px) {
+  #hero-container {
+    background-position: 60% !important;
+    background-size: cover !important;
+  }
+}
+@media only screen and (max-width: 1040px) {
+  header {
+    position: static !important;
+    top: none;
+  }
+
+  #under-header {
+    top: 0 !important;
+  }
+}
+@media only screen and (max-width: 980px) {
+  #inst-container {
+    padding-bottom: 4rem !important;
+  }
+  #inst-container #inst-grid {
+    grid-template-rows: none !important;
+  }
+  #inst-container #inst-grid .inst {
+    grid-template-columns: 1fr !important;
+  }
+
+  #contact {
+    padding-right: 10rem !important;
+    padding-left: 10rem !important;
+  }
+}
+@media only screen and (max-width: 780px) {
+  #nav-buttons {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 690px) {
+  #contact {
+    padding-right: 5rem !important;
+    padding-left: 5rem !important;
+  }
+}
+@media only screen and (max-width: 560px) {
+  #under-header {
+    padding-left: 1.2rem !important;
+  }
+
+  #contact {
+    padding-right: 2rem !important;
+    padding-left: 2rem !important;
+  }
+
+  #tabs-container {
+    padding-right: 1em;
+    padding-left: 1em;
+  }
+  #tabs-container #tabs {
+    flex-grow: 1;
+  }
+  #tabs-container #tabs h1 {
+    font-size: 16pt;
+  }
+  #tabs-container #tabs #tabs-buttons-container .tab {
+    padding-right: 0.9rem !important;
+    padding-left: 0.9rem !important;
+  }
+  #tabs-container #tabs #tabs-buttons-container .tab span {
+    font-size: 15pt;
+  }
+
+  .tab-panel-flex {
+    grid-template-rows: 1fr 11rem;
+    grid-template-columns: none !important;
+    justify-items: center;
+  }
+
+  .tab-panel-text {
+    text-align: center;
+    width: auto !important;
+  }
+
+  .drink-img-container {
+    max-width: 100% !important;
+  }
+
+  #tab-panels {
+    padding-bottom: 0 !important;
+  }
+
+  #inst-container {
+    padding: 4rem 1rem 4rem 2rem !important;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #nav-global {
+    display: none !important;
+  }
+
+  #logo-container {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+@media only screen and (max-width: 330px) {
+  .input-container label {
+    font-size: 12px !important;
+  }
+
+  #tabs-container #tabs-buttons-container .tab span {
+    font-size: 12pt;
+  }
 }
