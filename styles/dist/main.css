@@ -654,6 +654,10 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   display: flex;
 }
 
+p > a:hover {
+  text-decoration: none;
+}
+
 @media only screen and (max-width: 1126px) {
   #hero-container {
     background-position: 60% !important;
