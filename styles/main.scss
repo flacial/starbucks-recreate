@@ -789,6 +789,13 @@ header {
             }
         }
 
+#contact {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    padding-left: 15rem;
+    padding-right: 15rem;
+
+    #codes {
         .input-container {
             max-width: 33rem;
             position: relative;
@@ -871,6 +878,15 @@ header {
             a {
                 margin-right: 5px;
             }
+    }
+
+    #questions {
+        margin-top: 8rem;
+
+        a,
+        svg {
+            color: $sb-green;
+            stroke: $sb-green;
         }
     }
 }
