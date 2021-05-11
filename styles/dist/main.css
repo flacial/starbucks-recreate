@@ -639,11 +639,89 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
 }
 #contact #questions {
   margin-top: 8rem;
+  line-height: 1.7;
 }
 #contact #questions a,
 #contact #questions svg {
   color: #008248;
   stroke: #008248;
+}
+
+#details {
+  padding: 2rem 1rem 1rem 1rem;
+  background-color: #f7f7f7;
+}
+#details p:first-child {
+  margin-bottom: 2rem;
+}
+#details .details-container {
+  display: flex;
+  flex-direction: column;
+}
+#details .details-container p:last-child {
+  margin-bottom: 2rem;
+}
+#details h3 {
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  color: rgba(0, 0, 0, 0.56);
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+#details p {
+  font-size: 12px;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+#lists {
+  margin-top: 4rem;
+  padding: 1rem;
+  padding-bottom: 10rem;
+  border-top: 2px solid #f3f1e7;
+  border-bottom: 2px solid #f3f1e7;
+}
+#lists .item {
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+#lists .item-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+#lists .item-head h3 {
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: 600;
+  z-index: -10;
+}
+#lists .item-head svg {
+  z-index: -10;
+  transform: rotate(0);
+  transition: transform 0.2s linear;
+}
+#lists .list {
+  overflow: hidden;
+  position: relative;
+  height: 0;
+  transition: height 0.2s linear;
+}
+#lists .list ul {
+  position: absolute;
+  bottom: 0;
+  transition: bottom 0.2s linear;
+  font-size: 15px;
+  font-weight: 500;
+}
+#lists .list ul li {
+  color: rgba(0, 0, 0, 0.56);
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  margin-bottom: 1.4rem;
 }
 
 .block {
@@ -654,8 +732,13 @@ header nav #nav-global #nav-buttons #sign-in-buttons-container #join:hover {
   display: flex;
 }
 
-p > a:hover {
+p a:hover {
   text-decoration: none;
+}
+p a,
+p svg {
+  color: #008248;
+  stroke: #008248;
 }
 
 @media only screen and (max-width: 1126px) {
@@ -707,8 +790,8 @@ p > a:hover {
   }
 
   #contact {
-    padding-right: 2rem !important;
-    padding-left: 2rem !important;
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
   }
 
   #tabs-container {
@@ -750,6 +833,23 @@ p > a:hover {
 
   #inst-container {
     padding: 4rem 1rem 4rem 2rem !important;
+  }
+}
+@media only screen and (min-width: 560px) {
+  #details {
+    padding: 2rem;
+  }
+  #details .details-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+  }
+  #details h3 {
+    font-size: 16px;
+    font-weight: 800;
+  }
+  #details p {
+    font-size: 13.5px;
   }
 }
 @media only screen and (max-width: 450px) {

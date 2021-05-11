@@ -791,11 +791,101 @@ header {
 
   #questions {
     margin-top: 8rem;
+    line-height: 1.7;
 
     a,
     svg {
       color: $sb-green;
       stroke: $sb-green;
+    }
+  }
+}
+
+#details {
+  padding: 2rem 1rem 1rem 1rem;
+  background-color: rgb(247, 247, 247);
+
+  p:first-child {
+    margin-bottom: 2rem;
+  }
+
+  .details-container {
+    display: flex;
+    flex-direction: column;
+
+    p:last-child {
+      margin-bottom: 2rem;
+    }
+  }
+
+  h3 {
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    color: rgba(0, 0, 0, 0.56);
+    margin-bottom: 1rem;
+    font-weight: 800;
+  }
+
+  p {
+    font-size: 12px;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+}
+
+#lists {
+  margin-top: 4rem;
+  padding: 1rem;
+  padding-bottom: 10rem;
+  border-top: 2px solid $light-wheat;
+  border-bottom: 2px solid $light-wheat;
+
+  .item {
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+
+  .item-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+
+    h3 {
+      font-size: 18px;
+      color: rgba(0, 0, 0, 0.87);
+      font-weight: 600;
+      z-index: -10;
+    }
+
+    svg {
+      z-index: -10;
+      transform: rotate(0);
+      transition: transform .2s linear;
+    }
+  }
+
+  .list {
+    overflow: hidden;
+    position: relative;
+    height: 0;
+    transition: height 0.2s linear;
+
+    ul {
+      position: absolute;
+      bottom: 0;
+      transition: bottom 0.2s linear;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    ul li {
+      color: rgba(0,0,0,.56);
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+      margin-bottom: 1.4rem;
     }
   }
 }
@@ -809,9 +899,15 @@ header {
 }
 
 
-p > a {
-  &:hover {
+p {
+  a:hover {
     text-decoration: none;
+  }
+
+  a,
+  svg {
+    color: $sb-green;
+    stroke: $sb-green;
   }
 }
 
@@ -871,8 +967,8 @@ p > a {
   }
 
   #contact {
-    padding-right: 2rem !important;
-    padding-left: 2rem !important;
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
   }
 
   #tabs-container {
@@ -922,6 +1018,28 @@ p > a {
 
   #inst-container {
     padding: 4rem 1rem 4rem 2rem !important;
+  }
+}
+
+
+@media only screen and (min-width: 560px) {
+  #details {
+    padding: 2rem;
+
+    .details-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 2rem;
+    }
+  
+    h3 {
+      font-size: 16px;
+      font-weight: 800;
+    }
+  
+    p {
+      font-size: 13.5px;
+    }
   }
 }
 

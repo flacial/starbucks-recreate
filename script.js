@@ -6,6 +6,7 @@ let setTabPanelId = async (state) => {
 
 // navbar link animation start
 const $ = (query) => document.querySelector(query);
+const $$ = (query) => document.querySelectorAll(query);
 
 let line = document.querySelector("#line");
 let item = document.querySelectorAll("#anchor");
@@ -115,6 +116,47 @@ tabs.forEach((Link) => {
     }
   });
 });
+
+
+const itemHead = $$('.item-head')
+const list = $$('.list')
+const listItems = $$('.list-items')
+
+const itemHandler = (e) =>  {
+  const listItem = e.target.nextElementSibling.children[0];
+  const list = e.target.nextElementSibling;
+  const svg = e.target.children[1];
+
+  list.style.height = !list.style.height ? listItem.clientHeight + 'px' : ''
+  listItem.style.bottom = listItem.style.bottom ? '50px' : '';
+  svg.style.transform = !svg.style.transform ? 'rotate(180deg)' : ''
+}
+
+itemHead.forEach(item => {
+  item.addEventListener('click', itemHandler)
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // navbar link animation end
 // drinkImg = document.querySelector('.drink-img');
